@@ -1,0 +1,121 @@
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/MaterialIcons-Regular.eot'); /* For IE6-8 */
+	src: local('Material Icons'),
+		local('MaterialIcons-Regular'),
+		url('../font/MaterialIcons-Regular.woff2') format('woff2'),
+		url('../font/MaterialIcons-Regular.woff') format('woff'),
+		url('../font/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/roboto/Roboto-Regular.eot'); /* For IE6-8 */
+	src: local('Roboto'),
+		local('Roboto-Regular'),
+		url('../font/roboto/Roboto-Regular.woff2') format('woff2'),
+		url('../font/roboto/Roboto-Regular.woff') format('woff'),
+		url('../font/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	vertical-align: middle;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+}
+
+html {
+	font-family: 'Roboto', Verdana, Geneva, sans-serif;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+main img {
+	max-width: 100%;
+	height: auto;
+}
+
+#sidenav-overlay {
+	z-index: 990;
+}
+
+.toast .material-icons {
+	margin-left: -10px;
+	margin-right: 10px;
+}
+
+.brand-logo img {
+	height: 50px;
+	border: 2px solid;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin-top: 7px;
+}
+
+.container {
+	width: 95%;
+}
+
+@media only screen and (min-width: 601px) {
+	.container {
+	    width: 90%;
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	.container {
+	    width: 85%;
+	}
+}
+
+main .container {
+	padding: 25px 0px;
+}
+
+h3.card-title {
+	margin-top: 0;
+}
+
+h3.card-title + .divider {
+	margin-bottom: 15px;
+}
+
+.overflow-side-scroll {
+	overflow-x: scroll;
+}
+
+table.striped th,
+table.striped td {
+	padding: 10px;
+}
+
+table.striped tbody th {
+	border-radius: 0;
+}
+
+table.striped tbody th + td {
+	width: 100%;
+}
+
+table.striped tbody td .btn-floating {
+	margin: 3px;
+}

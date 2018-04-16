@@ -1,0 +1,288 @@
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/MaterialIcons-Regular.eot'); /* For IE6-8 */
+	src: local('Material Icons'),
+		local('MaterialIcons-Regular'),
+		url('../font/MaterialIcons-Regular.woff2') format('woff2'),
+		url('../font/MaterialIcons-Regular.woff') format('woff'),
+		url('../font/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../font/roboto/Roboto-Regular.eot'); /* For IE6-8 */
+	src: local('Roboto'),
+		local('Roboto-Regular'),
+		url('../font/roboto/Roboto-Regular.woff2') format('woff2'),
+		url('../font/roboto/Roboto-Regular.woff') format('woff'),
+		url('../font/roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	vertical-align: middle;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
+}
+
+html {
+	font-family: 'Roboto', Verdana, Geneva, sans-serif;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+main img {
+	max-width: 100%;
+	height: auto;
+}
+
+h5 {
+	font-size: 1.42rem;
+}
+
+h6 {
+	font-size: 1.22rem;
+}
+
+strong {
+	font-weight: 600;
+}
+
+ol {
+	counter-reset: item;
+}
+
+ol > li {
+	counter-increment: item;
+}
+
+ol li {
+	margin: 20px 10px;
+}
+
+ol ol li {
+	display: block
+}
+
+ol ol li:before {
+	content: counters(item, ".") ". ";
+	margin-left: -30px;
+}
+
+table.striped tbody th {
+	border-radius: 0;
+}
+
+table.striped tbody th + td {
+	width: 100%;
+}
+
+#sidenav-overlay {
+	z-index: 990;
+}
+
+.toast .material-icons {
+	margin-left: -10px;
+	margin-right: 10px;
+}
+
+.brand-logo img {
+	height: 42px;
+	border: 2px solid;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin-top: 7px;
+}
+
+@media only screen and (min-width: 601px) {
+	.brand-logo img {
+		height: 50px;
+	}
+}
+
+nav .dropdown-content {
+    width: auto !important;
+    top: 50px !important;
+}
+
+.parallax-container {
+	height: 150px;
+}
+
+@media only screen and (min-width: 601px) {
+	.parallax-container {
+		height: 300px;
+	}
+}
+
+.container {
+	width: 95%;
+}
+
+@media only screen and (min-width: 601px) {
+	.container {
+	    width: 90%;
+	}
+}
+
+@media only screen and (min-width: 993px) {
+	.container {
+	    width: 85%;
+	}
+}
+
+main .container {
+	padding: 25px 0;
+}
+
+h3.card-title {
+	margin-top: 0;
+}
+
+h3.card-title + .divider {
+	margin-bottom: 15px;
+}
+
+.overflow-side-scroll {
+	overflow-x: scroll;
+}
+
+.textblock {
+	font-size: 1.2rem;
+}
+
+.card.banner-container img {
+	padding: 5px;
+}
+
+.card .card-content p {
+	margin: 1rem 0;
+}
+
+.background-pattern {
+	background: url(../img/background_tile.jpg);
+	background-size: 48px;
+}
+
+.background-pattern > .container > .row:nth-child(2) {
+	margin-bottom: 0;
+}
+
+#countdown-clock {
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 26px;
+	margin-top: 15px;
+}
+
+#countdown-clock > div {
+	padding: 8px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+#countdown-clock div > span {
+	padding: 15px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
+.smalltext {
+	padding-top: 5px;
+	font-size: 1rem;
+}
+
+.sidebar .event-details p:first-of-type {
+	margin-top: 0;
+}
+
+.sidebar .event-details p:last-of-type {
+	margin-bottom: 0;
+}
+
+.sidebar > .row {
+	margin-bottom: 0;
+}
+
+#rooms span.badge.new:after {
+	display: none;
+}
+
+.gallery {
+	-ms-flex-wrap: wrap;
+	-ms-flex-direction: column;
+	-webkit-flex-flow: row wrap;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.gallery figure {
+	-ms-flex: auto;
+	-webkit-box-flex: auto;
+	flex: auto;
+	margin: .6vw;
+	width: 320px;
+	height: 260px;
+	border-radius: 3px 3px 0 0;
+	overflow: hidden;
+	position: relative;
+}
+
+.gallery figure img {
+	height: auto;
+	width: 100%;
+}
+
+img.materialboxed.active {
+	max-height: 100vh;
+	max-width: 100vw;
+}
+
+.g-recaptcha > div {
+	margin: auto;
+}
+
+.google-maps {
+	width: 100%;
+	border: 0;
+	height: 450px;
+}
+
+footer.page-footer ul li {
+	display: inline-block;
+}
+
+footer.page-footer ul li a {
+	display: block;
+	margin: 10px;
+	font-size: 1.2rem;
+}
