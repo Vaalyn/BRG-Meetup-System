@@ -1,2 +1,4 @@
 /config/config.php
+/files/cache/*
+!/files/cache/.gitkeep
 /vendor/*

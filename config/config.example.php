@@ -2,7 +2,8 @@
 	return array(
 		'settings' => array(
 			'determineRouteBeforeAppMiddleware' => true,
-			'displayErrorDetails' => false
+			'displayErrorDetails' => false,
+			'routerCacheFile' => __DIR__ . '/../files/cache/fast-route-cache.php'
 		),
 		'config' => array(
 			'session' => array(
