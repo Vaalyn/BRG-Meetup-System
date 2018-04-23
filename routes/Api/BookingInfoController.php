@@ -1,7 +1,9 @@
 <?php
 	namespace Routes\Api;
 
+	use Exception\InfoException;
 	use Model\Booking;
+	use Model\Manager\BookingModelManager;
 	use Model\Setting;
 	use Psr\Container\ContainerInterface;
 	use Slim\Http\Request;
@@ -53,7 +55,7 @@
 				)));
 			}
 
-			if ($nightHike && !$this->checkIfNightHikePlaceIsAvailable()) {
+			if (!$this->checkIfNightHikePlaceIsAvailable($booking, $nightHike)) {
 				return $response->write(json_encode(array(
 					'status' => 'error',
 					'errors' => 'Es sind keine Plätze mehr für die Nachtwanderung verfügbar'
@@ -73,20 +75,28 @@
 		}
 
 		/**
+		 * @param \Model\Booking $booking
+		 * @param bool $nightHike
+		 *
 		 * @return bool
 		 */
-		protected function checkIfNightHikePlaceIsAvailable(): bool {
-			$nightHikePlaces = $this->container->config['nightHike']['places'];
-			$bookingsWithNightHike = Booking::join(
-					'booking_info',
-					'booking.booking_id',
-					'=',
-					'booking_info.booking_id'
-				)
-				->where('night_hike', '=', true)
-				->count();
+		protected function checkIfNightHikePlaceIsAvailable(Booking $booking, bool $nightHike): bool {
+			$bookingModelManager = new BookingModelManager(
+				$this->container->config['allowUnisexRooms'],
+				$this->container->config['nightHike']['places'],
+				$this->container->auth,
+				$this->container->mailer,
+				$this->container->renderer
+			);
 
-			return (bool) $nightHikePlaces - $bookingsWithNightHike;
+			try {
+				$bookingModelManager->validateNightHikeBooking($booking, $nightHike);
+			}
+			catch(InfoException $exception) {
+				return false;
+			}
+
+			return true;
 		}
 	}
 ?>

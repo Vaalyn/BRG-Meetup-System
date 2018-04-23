@@ -290,22 +290,7 @@
 				throw new InfoException('In diesem Zimmer sind keine Betten mehr verfügbar');
 			}
 
-			$bookingsWithNightHike = Booking::join(
-					'booking_info',
-					'booking.booking_id',
-					'=',
-					'booking_info.booking_id'
-				)
-				->where('night_hike', '=', true)
-				->count();
-			$availableNightHikePlaces = $this->nightHikePlaces - $bookingsWithNightHike;
-
-			if ($booking === null && $nightHike && $availableNightHikePlaces <= 0) {
-				throw new InfoException('Es sind keine Plätze mehr für die Nachtwanderung verfügbar');
-			}
-			else if (!$booking->bookingInfo->night_hike && $nightHike && $availableNightHikePlaces <= 0) {
-				throw new InfoException('Es sind keine Plätze mehr für die Nachtwanderung verfügbar');
-			}
+			$this->validateNightHikeBooking($booking, $nightHike);
 		}
 
 		/**
@@ -359,6 +344,36 @@
 
 			if (!isset($partnerBooking)) {
 				throw new InfoException('Ungültiger Pärchencode');
+			}
+		}
+
+		/**
+		 * @param \Model\Booking $booking
+		 * @param bool $nightHike
+		 *
+		 * @return void
+		 */
+		public function validateNightHikeBooking(Booking $booking, bool $nightHike): void {
+			if (!$nightHike) {
+				return;
+			}
+
+			$bookingsWithNightHike = Booking::join(
+					'booking_info',
+					'booking.booking_id',
+					'=',
+					'booking_info.booking_id'
+				)
+				->where('night_hike', '=', true)
+				->count();
+			$availableNightHikePlaces = $this->nightHikePlaces - $bookingsWithNightHike;
+
+			if ($availableNightHikePlaces > 0) {
+				return;
+			}
+
+			if ($booking === null || !$booking->bookingInfo->night_hike) {
+				throw new InfoException('Es sind keine Plätze mehr für die Nachtwanderung verfügbar');
 			}
 		}
 	}
