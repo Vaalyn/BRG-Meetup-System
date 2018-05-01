@@ -43,7 +43,7 @@
 											</tr>
 										<?php endforeach; ?>
 
-										<?php if (!count($waitingListEntry)) : ?>
+										<?php if (!count($waitingListEntries)) : ?>
 											<tr>
 												<td class="center" colspan="5">
 													Keine Wartelisteneinträge gefunden
