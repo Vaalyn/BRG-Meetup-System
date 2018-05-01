@@ -348,12 +348,12 @@
 		}
 
 		/**
-		 * @param \Model\Booking $booking
+		 * @param null|\Model\Booking $booking
 		 * @param bool $nightHike
 		 *
 		 * @return void
 		 */
-		public function validateNightHikeBooking(Booking $booking, bool $nightHike): void {
+		public function validateNightHikeBooking(?Booking $booking, bool $nightHike): void {
 			if (!$nightHike) {
 				return;
 			}
