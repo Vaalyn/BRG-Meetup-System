@@ -164,6 +164,20 @@
 										<a id="book-room" class="btn waves-effect waves-light color-1 submit">Buchen
 											<i class="material-icons right">assignment_turned_in</i>
 										</a>
+
+										<div class="preloader-wrapper big active hide">
+											<div class="spinner-layer spinner-blue-only">
+												<div class="circle-clipper left">
+													<div class="circle"></div>
+												</div>
+												<div class="gap-patch">
+													<div class="circle"></div>
+												</div>
+												<div class="circle-clipper right">
+													<div class="circle"></div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</form>

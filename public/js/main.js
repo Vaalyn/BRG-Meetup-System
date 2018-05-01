@@ -220,6 +220,9 @@ $(document).ready(function() {
 			}
 		});
 
+		$('#booking #book-room').addClass('hide');
+		$('#booking .preloader-wrapper').removeClass('hide');
+
 		$.post('api/booking/create', formData)
 			.done(function(data) {
 				if (data.status === 'success') {
@@ -228,10 +231,14 @@ $(document).ready(function() {
 					});
 				} else {
 					Materialize.toast('<i class="material-icons red-text text-darken-1">error_outline</i> ' + data.errors, 3000);
+					$('#booking .preloader-wrapper').addClass('hide');
+					$('#booking #book-room').removeClass('hide');
 				}
 			})
 			.fail(function() {
 				Materialize.toast('<i class="material-icons red-text text-darken-1">error_outline</i> Fehler beim buchen', 3000);
+				$('#booking .preloader-wrapper').addClass('hide');
+				$('#booking #book-room').removeClass('hide');
 			});
 	});
 
