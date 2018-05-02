@@ -68,8 +68,8 @@
 												<tr>
 													<th>Gebucht</th>
 													<td>
-														<?php echo date('H:i:s', strtotime($user->booking->created_at)); ?><br/>
-														<?php echo date('d.m.Y', strtotime($user->booking->created_at)); ?>
+														<?php echo $user->booking->created_at->format('H:i:s'); ?><br/>
+														<?php echo $user->booking->created_at->format('d.m.Y'); ?>
 													</td>
 												</tr>
 												<tr>

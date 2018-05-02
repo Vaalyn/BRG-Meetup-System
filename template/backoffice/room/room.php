@@ -30,14 +30,14 @@
 												<td><?php echo $room->bed_count; ?></td>
 												<td><?php echo $room->bookings->count(); ?></td>
 												<td>
-													<?php echo date('H:i:s', strtotime($room->created_at)); ?>
+													<?php echo $room->created_at->format('H:i:s'); ?>
 													<br />
-													<?php echo date('d.m.Y', strtotime($room->created_at)); ?>
+													<?php echo $room->created_at->format('d.m.Y'); ?>
 												</td>
 												<td>
-													<?php echo date('H:i:s', strtotime($room->updated_at)); ?>
+													<?php echo $room->updated_at->format('H:i:s'); ?>
 													<br />
-													<?php echo date('d.m.Y', strtotime($room->updated_at)); ?>
+													<?php echo $room->updated_at->format('d.m.Y'); ?>
 												</td>
 												<td>
 													<a href="backoffice/room/<?php echo $room->room_id; ?>/details" alt="Details" class="btn-floating waves-effect waves-light color-1 tooltipped" data-delay="200" data-position="top" data-tooltip="Details">

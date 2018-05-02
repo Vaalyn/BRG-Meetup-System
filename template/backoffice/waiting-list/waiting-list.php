@@ -25,9 +25,9 @@
 											<tr>
 												<td><?php echo htmlentities($waitingListEntry->username); ?></td>
 												<td>
-													<?php echo date('H:i:s', strtotime($waitingListEntry->created_at)); ?>
+													<?php echo $waitingListEntry->created_at->format('H:i:s'); ?>
 													<br />
-													<?php echo date('d.m.Y', strtotime($waitingListEntry->created_at)); ?>
+													<?php echo $waitingListEntry->created_at->format('d.m.Y'); ?>
 												</td>
 												<td>
 													<a href="mailto:<?php echo htmlentities($waitingListEntry->email); ?>">

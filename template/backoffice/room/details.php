@@ -26,15 +26,15 @@
 										<tr>
 											<th>Erstellt</th>
 											<td>
-												<?php echo date('H:i:s', strtotime($room->created_at)); ?><br/>
-												<?php echo date('d.m.Y', strtotime($room->created_at)); ?>
+												<?php echo $room->created_at->format('H:i:s'); ?><br/>
+												<?php echo $room->created_at->format('d.m.Y'); ?>
 											</td>
 										</tr>
 										<tr>
 											<th>Aktualisiert</th>
 											<td>
-												<?php echo date('H:i:s', strtotime($room->updated_at)); ?><br/>
-												<?php echo date('d.m.Y', strtotime($room->updated_at)); ?>
+												<?php echo $room->updated_at->format('H:i:s'); ?><br/>
+												<?php echo $room->updated_at->format('d.m.Y'); ?>
 											</td>
 										</tr>
 									</tbody>
@@ -80,14 +80,14 @@
 													<?php endif; ?>
 												</td>
 												<td>
-													<?php echo date('H:i:s', strtotime($booking->created_at)); ?>
+													<?php echo $booking->created_at->format('H:i:s'); ?>
 													<br />
-													<?php echo date('d.m.Y', strtotime($booking->created_at)); ?>
+													<?php echo $booking->created_at->format('d.m.Y'); ?>
 												</td>
 												<td>
-													<?php echo date('H:i:s', strtotime($booking->updated_at)); ?>
+													<?php echo $booking->updated_at->format('H:i:s'); ?>
 													<br />
-													<?php echo date('d.m.Y', strtotime($booking->updated_at)); ?>
+													<?php echo $booking->updated_at->format('d.m.Y'); ?>
 												</td>
 												<td>
 													<?php if ($booking->confirmed) : ?>
