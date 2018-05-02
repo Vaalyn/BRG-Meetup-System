@@ -18,6 +18,7 @@
 											<th>E-Mail</th>
 											<th>Bezahlt</th>
 											<th>Nachtwanderung</th>
+											<th>Gebucht</th>
 											<th>Aktion</th>
 										</tr>
 									</thead>
@@ -46,6 +47,10 @@
 													<?php else : ?>
 														<i class="material-icons red-text text-darken-2">remove_circle</i>
 													<?php endif; ?>
+												</td>
+												<td>
+													<?php echo $booking->created_at->format('H:i:s'); ?><br/>
+													<?php echo $booking->created_at->format('d.m.Y'); ?>
 												</td>
 												<td>
 													<a href="backoffice/room/<?php echo $booking->room->room_id; ?>/details" class="btn-floating waves-effect waves-light color-1 tooltipped" data-delay="200" data-position="top" data-tooltip="Zimmer">
