@@ -69,7 +69,11 @@
 				return $response->withRedirect($referer);
 			}
 
-			return $response->withRedirect($this->container->router->pathFor('dashboard'));
+			if ($this->container->auth->isAdmin()) {
+				return $response->withRedirect($this->container->router->pathFor('dashboard'));
+			}
+
+			return $response->withRedirect($this->container->router->pathFor('booking'));
 		}
 	}
 ?>
