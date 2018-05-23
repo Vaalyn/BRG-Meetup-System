@@ -1,102 +1,102 @@
 <?php
-	namespace Routes\Api;
 
-	use Exception\InfoException;
-	use Model\Booking;
-	use Model\Manager\BookingModelManager;
-	use Model\Setting;
-	use Psr\Container\ContainerInterface;
-	use Slim\Http\Request;
-	use Slim\Http\Response;
+namespace Routes\Api;
 
-	class BookingInfoController {
-		/**
-		 * @var \Psr\Container\ContainerInterface
-		 */
-		protected $container;
+use Exception\InfoException;
+use Model\Booking;
+use Model\Manager\BookingModelManager;
+use Model\Setting;
+use Psr\Container\ContainerInterface;
+use Slim\Http\Request;
+use Slim\Http\Response;
 
-		/**
-		 * @param \Psr\Container\ContainerInterface $container
-		 */
-		public function __construct(ContainerInterface $container) {
-			$this->container = $container;
-		}
+class BookingInfoController {
+	/**
+	 * @var \Psr\Container\ContainerInterface
+	 */
+	protected $container;
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function updateBookingInfoAction(Request $request, Response $response, array $args): Response {
-			$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+	/**
+	 * @param \Psr\Container\ContainerInterface $container
+	 */
+	public function __construct(ContainerInterface $container) {
+		$this->container = $container;
+	}
 
-			$allergies = $request->getParsedBody()['allergies'] ?? '';
-			$stuff     = $request->getParsedBody()['stuff'] ?? '';
-			$wishes    = $request->getParsedBody()['wishes'] ?? '';
-			$nightHike = isset($request->getParsedBody()['night_hike']);
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function updateBookingInfoAction(Request $request, Response $response, array $args): Response {
+		$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
 
-			$bookingIsActive = (bool) Setting::where('setting_code', '=', 'booking_active')->first();
+		$allergies = $request->getParsedBody()['allergies'] ?? '';
+		$stuff     = $request->getParsedBody()['stuff'] ?? '';
+		$wishes    = $request->getParsedBody()['wishes'] ?? '';
+		$nightHike = isset($request->getParsedBody()['night_hike']);
 
-			if (!$bookingIsActive) {
-				return $response->write(json_encode(array(
-					'status' => 'error',
-					'errors' => 'Die Buchungsinformationen dürfen nicht mehr geändert werden'
-				)));
-			}
+		$bookingIsActive = (bool) Setting::where('setting_code', '=', 'booking_active')->first();
 
-			$booking = $this->container->auth->user()->booking;
-
-			if (!isset($booking)) {
-				return $response->write(json_encode(array(
-					'status' => 'error',
-					'errors' => 'Du hast kein Zimmer gebucht'
-				)));
-			}
-
-			if (!$this->checkIfNightHikePlaceIsAvailable($booking, $nightHike)) {
-				return $response->write(json_encode(array(
-					'status' => 'error',
-					'errors' => 'Es sind keine Plätze mehr für die Nachtwanderung verfügbar'
-				)));
-			}
-
-			$booking->bookingInfo->allergies  = $allergies;
-			$booking->bookingInfo->stuff      = $stuff;
-			$booking->bookingInfo->wishes     = $wishes;
-			$booking->bookingInfo->night_hike = $nightHike;
-			$booking->bookingInfo->save();
-
+		if (!$bookingIsActive) {
 			return $response->write(json_encode(array(
-				'status' => 'success',
-				'message' => 'Informationen wurden aktualisiert'
+				'status' => 'error',
+				'errors' => 'Die Buchungsinformationen dürfen nicht mehr geändert werden'
 			)));
 		}
 
-		/**
-		 * @param \Model\Booking $booking
-		 * @param bool $nightHike
-		 *
-		 * @return bool
-		 */
-		protected function checkIfNightHikePlaceIsAvailable(Booking $booking, bool $nightHike): bool {
-			$bookingModelManager = new BookingModelManager(
-				$this->container->config['allowUnisexRooms'],
-				$this->container->config['nightHike']['places'],
-				$this->container->auth,
-				$this->container->mailer,
-				$this->container->renderer
-			);
+		$booking = $this->container->auth->user()->booking;
 
-			try {
-				$bookingModelManager->validateNightHikeBooking($booking, $nightHike);
-			}
-			catch(InfoException $exception) {
-				return false;
-			}
-
-			return true;
+		if (!isset($booking)) {
+			return $response->write(json_encode(array(
+				'status' => 'error',
+				'errors' => 'Du hast kein Zimmer gebucht'
+			)));
 		}
+
+		if (!$this->checkIfNightHikePlaceIsAvailable($booking, $nightHike)) {
+			return $response->write(json_encode(array(
+				'status' => 'error',
+				'errors' => 'Es sind keine Plätze mehr für die Nachtwanderung verfügbar'
+			)));
+		}
+
+		$booking->bookingInfo->allergies  = $allergies;
+		$booking->bookingInfo->stuff      = $stuff;
+		$booking->bookingInfo->wishes     = $wishes;
+		$booking->bookingInfo->night_hike = $nightHike;
+		$booking->bookingInfo->save();
+
+		return $response->write(json_encode(array(
+			'status' => 'success',
+			'message' => 'Informationen wurden aktualisiert'
+		)));
 	}
-?>
+
+	/**
+	 * @param \Model\Booking $booking
+	 * @param bool $nightHike
+	 *
+	 * @return bool
+	 */
+	protected function checkIfNightHikePlaceIsAvailable(Booking $booking, bool $nightHike): bool {
+		$bookingModelManager = new BookingModelManager(
+			$this->container->config['allowUnisexRooms'],
+			$this->container->config['nightHike']['places'],
+			$this->container->auth,
+			$this->container->mailer,
+			$this->container->renderer
+		);
+
+		try {
+			$bookingModelManager->validateNightHikeBooking($booking, $nightHike);
+		}
+		catch(InfoException $exception) {
+			return false;
+		}
+
+		return true;
+	}
+}

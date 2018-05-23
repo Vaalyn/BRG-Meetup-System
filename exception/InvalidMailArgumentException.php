@@ -1,7 +1,7 @@
 <?php
-	namespace Exception;
 
-	class InvalidMailArgumentException extends \Exception {
+namespace Exception;
 
-	}
-?>
+class InvalidMailArgumentException extends \Exception {
+
+}

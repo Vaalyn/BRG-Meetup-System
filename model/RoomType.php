@@ -1,22 +1,22 @@
 <?php
-	namespace Model;
 
-	use Illuminate\Database\Eloquent\Model;
-	use Illuminate\Database\Eloquent\Relations\HasMany;
-	use Illuminate\Database\Eloquent\SoftDeletes;
+namespace Model;
 
-	class RoomType extends Model {
-		use SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-		protected $table      = 'room_type';
-		protected $primaryKey = 'room_type_id';
-		protected $dates      = ['created_at', 'updated_at', 'deleted_at'];
+class RoomType extends Model {
+	use SoftDeletes;
 
-		/**
-		 * @return \Illuminate\Database\Eloquent\Relations\HasMany
-		 */
-		public function rooms(): HasMany {
-		    return $this->hasMany(Room::class, 'room_type_id');
-		}
+	protected $table      = 'room_type';
+	protected $primaryKey = 'room_type_id';
+	protected $dates      = ['created_at', 'updated_at', 'deleted_at'];
+
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+	 */
+	public function rooms(): HasMany {
+	    return $this->hasMany(Room::class, 'room_type_id');
 	}
-?>
+}

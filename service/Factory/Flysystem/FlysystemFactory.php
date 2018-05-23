@@ -1,24 +1,23 @@
 <?php
-	namespace Service\Factory\Flysystem;
 
-	use League\Flysystem\Filesystem;
+namespace Service\Factory\Flysystem;
 
-	class FlysystemFactory {
-		/**
-		 * @param array $config
-		 *
-		 * @return \League\Flysystem\Filesystem
-		 */
-		public static function create(array $config): Filesystem {
-			$adapter = new \ReflectionClass($config['adapter']);
+use League\Flysystem\Filesystem;
 
-	        $filesystem = new Filesystem(
-				$adapter->newInstanceArgs($config['arguments']),
-				$config['config']
-			);
+class FlysystemFactory {
+	/**
+	 * @param array $config
+	 *
+	 * @return \League\Flysystem\Filesystem
+	 */
+	public static function create(array $config): Filesystem {
+		$adapter = new \ReflectionClass($config['adapter']);
 
-			return $filesystem;
-		}
+        $filesystem = new Filesystem(
+			$adapter->newInstanceArgs($config['arguments']),
+			$config['config']
+		);
+
+		return $filesystem;
 	}
-
-?>
+}

@@ -1,22 +1,21 @@
 <?php
-	namespace Service\Factory\Eloquent;
 
-	use Illuminate\Database\Capsule\Manager;
+namespace Service\Factory\Eloquent;
 
-	class EloquentFactory {
-		/**
-		 * @param array $config
-		 *
-		 * @return \Illuminate\Database\Capsule\Manager
-		 */
-		public static function create(array $config): Manager {
-			$capsule = new Manager;
-			$capsule->addConnection($config);
-			$capsule->setAsGlobal();
-			$capsule->bootEloquent();
+use Illuminate\Database\Capsule\Manager;
 
-			return $capsule;
-		}
+class EloquentFactory {
+	/**
+	 * @param array $config
+	 *
+	 * @return \Illuminate\Database\Capsule\Manager
+	 */
+	public static function create(array $config): Manager {
+		$capsule = new Manager;
+		$capsule->addConnection($config);
+		$capsule->setAsGlobal();
+		$capsule->bootEloquent();
+
+		return $capsule;
 	}
-
-?>
+}

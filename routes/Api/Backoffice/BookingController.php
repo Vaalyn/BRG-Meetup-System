@@ -1,428 +1,428 @@
 <?php
-	namespace Routes\Api\Backoffice;
 
-	use Exception\InfoException;
-	use Model\Booking;
-	use Model\Manager\BookingModelManager;
-	use Model\Room;
-	use Model\User;
-	use Psr\Container\ContainerInterface;
-	use Ramsey\Uuid\Uuid;
-	use Slim\Http\Request;
-	use Slim\Http\Response;
+namespace Routes\Api\Backoffice;
 
-	class BookingController {
-		/**
-		 * @var \Psr\Container\ContainerInterface
-		 */
-		protected $container;
+use Exception\InfoException;
+use Model\Booking;
+use Model\Manager\BookingModelManager;
+use Model\Room;
+use Model\User;
+use Psr\Container\ContainerInterface;
+use Ramsey\Uuid\Uuid;
+use Slim\Http\Request;
+use Slim\Http\Response;
 
-		/**
-		 * @param \Psr\Container\ContainerInterface $container
-		 */
-		public function __construct(ContainerInterface $container) {
-			$this->container = $container;
-		}
+class BookingController {
+	/**
+	 * @var \Psr\Container\ContainerInterface
+	 */
+	protected $container;
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function confirmRoomAction(Request $request, Response $response, array $args): Response {
-			$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+	/**
+	 * @param \Psr\Container\ContainerInterface $container
+	 */
+	public function __construct(ContainerInterface $container) {
+		$this->container = $container;
+	}
 
-			$id = $args['id'];
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function confirmRoomAction(Request $request, Response $response, array $args): Response {
+		$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
 
-			$booking = Booking::where('booking_id', '=', $id)->first();
+		$id = $args['id'];
 
-			if (!isset($booking)) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Keine Buchung gefunden'
-				)));
-			}
+		$booking = Booking::where('booking_id', '=', $id)->first();
 
-			$booking->confirmed = true;
-			$booking->save();
-
+		if (!isset($booking)) {
 			return $response->write(json_encode(array(
-				'status' => 'success',
-				'message' => 'Zimmer wurde bestätigt'
+	        	'status' => 'error',
+				'errors' => 'Keine Buchung gefunden'
 			)));
 		}
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function removeRoomConfirmationAction(Request $request, Response $response, array $args): Response {
-			$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+		$booking->confirmed = true;
+		$booking->save();
 
-			$id = $args['id'];
+		return $response->write(json_encode(array(
+			'status' => 'success',
+			'message' => 'Zimmer wurde bestätigt'
+		)));
+	}
 
-			$booking = Booking::where('booking_id', '=', $id)->first();
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function removeRoomConfirmationAction(Request $request, Response $response, array $args): Response {
+		$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
 
-			if (!isset($booking)) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Keine Buchung gefunden'
-				)));
-			}
+		$id = $args['id'];
 
-			$booking->confirmed = false;
-			$booking->save();
+		$booking = Booking::where('booking_id', '=', $id)->first();
 
+		if (!isset($booking)) {
 			return $response->write(json_encode(array(
-				'status' => 'success',
-				'message' => 'Zimmerbestätigung wurde widerrufen'
+	        	'status' => 'error',
+				'errors' => 'Keine Buchung gefunden'
 			)));
 		}
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function setBookingPaidAction(Request $request, Response $response, array $args): Response {
-			$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+		$booking->confirmed = false;
+		$booking->save();
 
-			$id = $args['id'];
+		return $response->write(json_encode(array(
+			'status' => 'success',
+			'message' => 'Zimmerbestätigung wurde widerrufen'
+		)));
+	}
 
-			$booking = Booking::where('booking_id', '=', $id)->first();
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function setBookingPaidAction(Request $request, Response $response, array $args): Response {
+		$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
 
-			if (!isset($booking)) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Keine Buchung gefunden'
-				)));
-			}
+		$id = $args['id'];
 
-			$booking->paid = true;
-			$booking->save();
+		$booking = Booking::where('booking_id', '=', $id)->first();
 
-			$this->sendBookingPaidEmail($booking->user);
-
+		if (!isset($booking)) {
 			return $response->write(json_encode(array(
-				'status' => 'success',
-				'message' => 'Buchung wurde als bezahlt markiert'
+	        	'status' => 'error',
+				'errors' => 'Keine Buchung gefunden'
 			)));
 		}
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function setBookingUnpaidAction(Request $request, Response $response, array $args): Response {
-			$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+		$booking->paid = true;
+		$booking->save();
 
-			$id = $args['id'];
+		$this->sendBookingPaidEmail($booking->user);
 
-			$booking = Booking::where('booking_id', '=', $id)->first();
+		return $response->write(json_encode(array(
+			'status' => 'success',
+			'message' => 'Buchung wurde als bezahlt markiert'
+		)));
+	}
 
-			if (!isset($booking)) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Keine Buchung gefunden'
-				)));
-			}
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function setBookingUnpaidAction(Request $request, Response $response, array $args): Response {
+		$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
 
-			$booking->paid = false;
-			$booking->save();
+		$id = $args['id'];
 
+		$booking = Booking::where('booking_id', '=', $id)->first();
+
+		if (!isset($booking)) {
 			return $response->write(json_encode(array(
-				'status' => 'success',
-				'message' => 'Buchung wurde als nicht bezahlt markiert'
+	        	'status' => 'error',
+				'errors' => 'Keine Buchung gefunden'
 			)));
 		}
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function moveBookingToRoomAction(Request $request, Response $response, array $args): Response {
-			$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+		$booking->paid = false;
+		$booking->save();
 
-			$bookingId = $args['bookingId'];
-			$roomId    = $args['roomId'];
+		return $response->write(json_encode(array(
+			'status' => 'success',
+			'message' => 'Buchung wurde als nicht bezahlt markiert'
+		)));
+	}
 
-			$booking = Booking::where('booking_id', '=', $bookingId)->first();
-			$room    = Room::where('room_id', '=', $roomId)->first();
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function moveBookingToRoomAction(Request $request, Response $response, array $args): Response {
+		$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
 
-			$reason = $request->getParsedBody()['reason'] ?? 'Von Administrator geändert';
+		$bookingId = $args['bookingId'];
+		$roomId    = $args['roomId'];
 
-			if (!isset($booking)) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Keine Buchung gefunden'
-				)));
-			}
+		$booking = Booking::where('booking_id', '=', $bookingId)->first();
+		$room    = Room::where('room_id', '=', $roomId)->first();
 
-			if (!isset($room)) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Kein Zimmer gefunden'
-				)));
-			}
+		$reason = $request->getParsedBody()['reason'] ?? 'Von Administrator geändert';
 
-			if ($booking->room_id === $room->room_id) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Buchung läuft bereits auf dieses Zimmer'
-				)));
-			}
-
-			if ($room->bookings()->count() >= $room->bed_count) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Keine Betten verfügbar'
-				)));
-			}
-
-			switch ($room->roomType->type_code) {
-				case 'couple':
-					$booking->couple      = true;
-					$booking->couple_code = $room->bookings->count() === 0 ? Uuid::uuid4() : '';
-					break;
-
-				default:
-					$booking->couple      = false;
-					$booking->couple_code = '';
-					break;
-			}
-
-			$booking->room_id = $room->room_id;
-			$booking->save();
-
-			$this->sendBookingRoomChangedEmail(
-				$booking->user,
-				$booking,
-				$reason
-			);
-
+		if (!isset($booking)) {
 			return $response->write(json_encode(array(
-				'status' => 'success',
-				'message' => 'Zimmer der Buchung wurde geändert'
+	        	'status' => 'error',
+				'errors' => 'Keine Buchung gefunden'
 			)));
 		}
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function cancelBookingAction(Request $request, Response $response, array $args): Response {
-			$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
-
-			$id = $args['id'];
-
-			$reason = $request->getParsedBody()['reason'] ?? null;
-
-			$booking = Booking::where('booking_id', '=', $id)->first();
-
-			if (!isset($booking)) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Keine Buchung gefunden'
-				)));
-			}
-
-			$bookingModelManager = new BookingModelManager(
-				$this->container->config['allowUnisexRooms'],
-				$this->container->config['nightHike']['places'],
-				$this->container->auth,
-				$this->container->mailer,
-				$this->container->renderer
-			);
-
-			$bookingModelManager->cancelBooking($booking, $reason);
-
+		if (!isset($room)) {
 			return $response->write(json_encode(array(
-				'status' => 'success',
-				'message' => 'Buchung wurde storniert'
+	        	'status' => 'error',
+				'errors' => 'Kein Zimmer gefunden'
 			)));
 		}
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function deleteBookingAction(Request $request, Response $response, array $args): Response {
-			$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
-
-			$id = $args['id'];
-
-			$booking = Booking::onlyTrashed()->where('booking_id', '=', $id)->first();
-
-			if (!isset($booking)) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Keine Buchung gefunden'
-				)));
-			}
-
-			$booking->bookingInfo->delete();
-			$booking->forceDelete();
-
+		if ($booking->room_id === $room->room_id) {
 			return $response->write(json_encode(array(
-				'status' => 'success',
-				'message' => 'Buchung wurde gelöscht'
+	        	'status' => 'error',
+				'errors' => 'Buchung läuft bereits auf dieses Zimmer'
 			)));
 		}
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function exportBookingsAction(Request $request, Response $response, array $args): Response {
-			$bookings = Booking::get();
-
-			$temporaryCsvFile = tmpfile();
-
-			fputcsv($temporaryCsvFile, [
-				'Vorname',
-				'Nachname',
-				'Username',
-				'Zimmer',
-				'Allergien',
-				'Mitbringsel',
-				'Nachtwanderung'
-			]);
-
-			foreach ($bookings as $booking) {
-				$csvEntry = [
-					$booking->user->userInfo->first_name,
-					$booking->user->userInfo->last_name,
-					$booking->user->username,
-					$booking->room->name,
-					$booking->bookingInfo->allergies,
-					$booking->bookingInfo->stuff,
-					$booking->bookingInfo->night_hike
-				];
-
-				fputcsv($temporaryCsvFile, $csvEntry);
-			}
-
-			$fileSize = fstat($temporaryCsvFile)['size'];
-			$downloadFileStream = new \Slim\Http\Stream($temporaryCsvFile);
-
-			return $response->withStatus(200)
-				->withHeader('Content-Type', 'text/csv')
-				->withHeader('Content-Description', 'File Transfer')
-				->withHeader('Content-Disposition', 'attachment; filename="Buchungen.csv"')
-				->withHeader('Content-Transfer-Encoding', 'binary')
-				->withHeader('Cache-Control', 'no-cache')
-				->withHeader('Expires', '0')
-				->withHeader('Content-Length',  $fileSize)
-				->withBody($downloadFileStream);
+		if ($room->bookings()->count() >= $room->bed_count) {
+			return $response->write(json_encode(array(
+	        	'status' => 'error',
+				'errors' => 'Keine Betten verfügbar'
+			)));
 		}
 
-		/**
-		 * @param \Slim\Http\Request $request
-		 * @param \Slim\Http\Response $response
-		 * @param array $args
-		 *
-		 * @return \Slim\Http\Response
-		 */
-		public function getBookingAction(Request $request, Response $response, array $args): Response {
-			$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+		switch ($room->roomType->type_code) {
+			case 'couple':
+				$booking->couple      = true;
+				$booking->couple_code = $room->bookings->count() === 0 ? Uuid::uuid4() : '';
+				break;
 
-			$id = $args['id'];
+			default:
+				$booking->couple      = false;
+				$booking->couple_code = '';
+				break;
+		}
 
-			$booking = Booking::with('bookingInfo')
-				->where('booking_id', '=', $id)
-				->first();
+		$booking->room_id = $room->room_id;
+		$booking->save();
 
-			$user = User::with(['userInfo', 'userInfo.gender'])->where('user_id', '=', $booking->user_id)->first();
+		$this->sendBookingRoomChangedEmail(
+			$booking->user,
+			$booking,
+			$reason
+		);
 
-			$booking->user = [
-				'username' => $user->username,
-				'email' => $user->email,
-				'user_info' => $user->userInfo
+		return $response->write(json_encode(array(
+			'status' => 'success',
+			'message' => 'Zimmer der Buchung wurde geändert'
+		)));
+	}
+
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function cancelBookingAction(Request $request, Response $response, array $args): Response {
+		$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+
+		$id = $args['id'];
+
+		$reason = $request->getParsedBody()['reason'] ?? null;
+
+		$booking = Booking::where('booking_id', '=', $id)->first();
+
+		if (!isset($booking)) {
+			return $response->write(json_encode(array(
+	        	'status' => 'error',
+				'errors' => 'Keine Buchung gefunden'
+			)));
+		}
+
+		$bookingModelManager = new BookingModelManager(
+			$this->container->config['allowUnisexRooms'],
+			$this->container->config['nightHike']['places'],
+			$this->container->auth,
+			$this->container->mailer,
+			$this->container->renderer
+		);
+
+		$bookingModelManager->cancelBooking($booking, $reason);
+
+		return $response->write(json_encode(array(
+			'status' => 'success',
+			'message' => 'Buchung wurde storniert'
+		)));
+	}
+
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function deleteBookingAction(Request $request, Response $response, array $args): Response {
+		$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+
+		$id = $args['id'];
+
+		$booking = Booking::onlyTrashed()->where('booking_id', '=', $id)->first();
+
+		if (!isset($booking)) {
+			return $response->write(json_encode(array(
+	        	'status' => 'error',
+				'errors' => 'Keine Buchung gefunden'
+			)));
+		}
+
+		$booking->bookingInfo->delete();
+		$booking->forceDelete();
+
+		return $response->write(json_encode(array(
+			'status' => 'success',
+			'message' => 'Buchung wurde gelöscht'
+		)));
+	}
+
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function exportBookingsAction(Request $request, Response $response, array $args): Response {
+		$bookings = Booking::get();
+
+		$temporaryCsvFile = tmpfile();
+
+		fputcsv($temporaryCsvFile, [
+			'Vorname',
+			'Nachname',
+			'Username',
+			'Zimmer',
+			'Allergien',
+			'Mitbringsel',
+			'Nachtwanderung'
+		]);
+
+		foreach ($bookings as $booking) {
+			$csvEntry = [
+				$booking->user->userInfo->first_name,
+				$booking->user->userInfo->last_name,
+				$booking->user->username,
+				$booking->room->name,
+				$booking->bookingInfo->allergies,
+				$booking->bookingInfo->stuff,
+				$booking->bookingInfo->night_hike
 			];
 
-			if (!isset($booking)) {
-				return $response->write(json_encode(array(
-		        	'status' => 'error',
-					'errors' => 'Keine Buchung gefunden'
-				)));
-			}
+			fputcsv($temporaryCsvFile, $csvEntry);
+		}
 
+		$fileSize = fstat($temporaryCsvFile)['size'];
+		$downloadFileStream = new \Slim\Http\Stream($temporaryCsvFile);
+
+		return $response->withStatus(200)
+			->withHeader('Content-Type', 'text/csv')
+			->withHeader('Content-Description', 'File Transfer')
+			->withHeader('Content-Disposition', 'attachment; filename="Buchungen.csv"')
+			->withHeader('Content-Transfer-Encoding', 'binary')
+			->withHeader('Cache-Control', 'no-cache')
+			->withHeader('Expires', '0')
+			->withHeader('Content-Length',  $fileSize)
+			->withBody($downloadFileStream);
+	}
+
+	/**
+	 * @param \Slim\Http\Request $request
+	 * @param \Slim\Http\Response $response
+	 * @param array $args
+	 *
+	 * @return \Slim\Http\Response
+	 */
+	public function getBookingAction(Request $request, Response $response, array $args): Response {
+		$response = $response->withStatus(200)->withHeader('Content-Type', 'application/json');
+
+		$id = $args['id'];
+
+		$booking = Booking::with('bookingInfo')
+			->where('booking_id', '=', $id)
+			->first();
+
+		$user = User::with(['userInfo', 'userInfo.gender'])->where('user_id', '=', $booking->user_id)->first();
+
+		$booking->user = [
+			'username' => $user->username,
+			'email' => $user->email,
+			'user_info' => $user->userInfo
+		];
+
+		if (!isset($booking)) {
 			return $response->write(json_encode(array(
-				'status' => 'success',
-				'result' => $booking
+	        	'status' => 'error',
+				'errors' => 'Keine Buchung gefunden'
 			)));
 		}
 
-		/**
-		 * @param User $user
-		 *
-		 * @return void
-		 */
-		protected function sendBookingPaidEmail(User $user): void {
-			$paymentReceivedEmailMessage = $this->container->renderer->fetch(
-				'/mailer/booking/payment-received/payment-received.php'
+		return $response->write(json_encode(array(
+			'status' => 'success',
+			'result' => $booking
+		)));
+	}
+
+	/**
+	 * @param User $user
+	 *
+	 * @return void
+	 */
+	protected function sendBookingPaidEmail(User $user): void {
+		$paymentReceivedEmailMessage = $this->container->renderer->fetch(
+			'/mailer/booking/payment-received/payment-received.php'
+		);
+
+		try {
+			$this->container->mailer->sendMail(
+				'BRG-Meetup Zahlungseingang bestätigt',
+				$user->email,
+				$user->username,
+				$paymentReceivedEmailMessage
 			);
-
-			try {
-				$this->container->mailer->sendMail(
-					'BRG-Meetup Zahlungseingang bestätigt',
-					$user->email,
-					$user->username,
-					$paymentReceivedEmailMessage
-				);
-			} catch (\Exception\MailNotSendException $exception) {
-				throw new InfoException('Fehler beim senden der E-Mail Benachrichtigung nach Bezahlung');
-			}
-		}
-
-		/**
-		 * @param User $user
-		 * @param Booking $booking
-		 * @param string $reason
-		 *
-		 * @return void
-		 */
-		protected function sendBookingRoomChangedEmail(User $user, Booking $booking, string $reason): void {
-			$roomChangedEmailMessage = $this->container->renderer->fetch(
-				'/mailer/booking/room-changed/room-changed.php',
-				[
-					'reason' => $reason,
-					'booking' => $booking
-				]
-			);
-
-			try {
-				$this->container->mailer->sendMail(
-					'BRG-Meetup Zimmer wurde geändert',
-					$user->email,
-					$user->username,
-					$roomChangedEmailMessage
-				);
-			} catch (\Exception\MailNotSendException $exception) {
-				throw new InfoException('Fehler beim senden der E-Mail Benachrichtigung nach Zimmeränderung');
-			}
+		} catch (\Exception\MailNotSendException $exception) {
+			throw new InfoException('Fehler beim senden der E-Mail Benachrichtigung nach Bezahlung');
 		}
 	}
-?>
+
+	/**
+	 * @param User $user
+	 * @param Booking $booking
+	 * @param string $reason
+	 *
+	 * @return void
+	 */
+	protected function sendBookingRoomChangedEmail(User $user, Booking $booking, string $reason): void {
+		$roomChangedEmailMessage = $this->container->renderer->fetch(
+			'/mailer/booking/room-changed/room-changed.php',
+			[
+				'reason' => $reason,
+				'booking' => $booking
+			]
+		);
+
+		try {
+			$this->container->mailer->sendMail(
+				'BRG-Meetup Zimmer wurde geändert',
+				$user->email,
+				$user->username,
+				$roomChangedEmailMessage
+			);
+		} catch (\Exception\MailNotSendException $exception) {
+			throw new InfoException('Fehler beim senden der E-Mail Benachrichtigung nach Zimmeränderung');
+		}
+	}
+}

@@ -1,7 +1,7 @@
 <?php
-	namespace Exception;
 
-	class MailNotSendException extends \Exception {
+namespace Exception;
 
-	}
-?>
+class MailNotSendException extends \Exception {
+
+}

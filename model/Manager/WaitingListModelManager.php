@@ -1,52 +1,52 @@
 <?php
-	namespace Model\Manager;
 
-	use Exception\InfoException;
-	use Model\WaitingList;
-	use Respect\Validation\Validator;
+namespace Model\Manager;
 
-	class WaitingListModelManager {
-		/**
-		 * @param string $username
-		 * @param string $email
-		 * @param string $notice
-		 *
-		 * @return \Model\WaitingList
-		 */
-		public function createEntry(string $username, string $email, string $notice): WaitingList {
-			$this->validateEntry($username, $email);
+use Exception\InfoException;
+use Model\WaitingList;
+use Respect\Validation\Validator;
 
-			$entry           = new WaitingList();
-			$entry->username = $username;
-			$entry->email    = $email;
-			$entry->notice   = $notice;
-			$entry->save();
+class WaitingListModelManager {
+	/**
+	 * @param string $username
+	 * @param string $email
+	 * @param string $notice
+	 *
+	 * @return \Model\WaitingList
+	 */
+	public function createEntry(string $username, string $email, string $notice): WaitingList {
+		$this->validateEntry($username, $email);
 
-			if ($entry->waiting_list_id === null) {
-				throw new InfoException('Eintrag konnte nicht erstellt werden');
-			}
+		$entry           = new WaitingList();
+		$entry->username = $username;
+		$entry->email    = $email;
+		$entry->notice   = $notice;
+		$entry->save();
 
-			return $entry;
+		if ($entry->waiting_list_id === null) {
+			throw new InfoException('Eintrag konnte nicht erstellt werden');
 		}
 
-		/**
-		 * @param string $username
-		 * @param string $email
-		 *
-		 * @return void
-		 */
-		private function validateEntry(string $username, string $email): void {
-			if (trim($username) === '') {
-				throw new InfoException('Es muss eine Username eingegeben werden');
-			}
+		return $entry;
+	}
 
-			if (trim($email) === '') {
-				throw new InfoException('Es muss eine E-Mail Adresse eingegeben werden');
-			}
+	/**
+	 * @param string $username
+	 * @param string $email
+	 *
+	 * @return void
+	 */
+	private function validateEntry(string $username, string $email): void {
+		if (trim($username) === '') {
+			throw new InfoException('Es muss eine Username eingegeben werden');
+		}
 
-			if (!Validator::email()->validate(trim($email))) {
-				throw new InfoException('E-Mail Adresse ist ungültig');
-			}
+		if (trim($email) === '') {
+			throw new InfoException('Es muss eine E-Mail Adresse eingegeben werden');
+		}
+
+		if (!Validator::email()->validate(trim($email))) {
+			throw new InfoException('E-Mail Adresse ist ungültig');
 		}
 	}
-?>
+}

@@ -1,7 +1,7 @@
 <?php
-	namespace Exception;
 
-	class InvalidMailerConfigurationException extends \Exception {
+namespace Exception;
 
-	}
-?>
+class InvalidMailerConfigurationException extends \Exception {
+
+}

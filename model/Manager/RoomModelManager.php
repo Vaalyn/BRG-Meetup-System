@@ -1,78 +1,78 @@
 <?php
-	namespace Model\Manager;
 
-	use Exception\InfoException;
-	use Model\Room;
-	use Model\RoomType;
+namespace Model\Manager;
 
-	class RoomModelManager {
-		/**
-		 * @param int $roomTypeId
-		 * @param string $name
-		 * @param int $bedCount
-		 *
-		 * @return \Model\Room
-		 */
-		public function createRoom(int $roomTypeId, string $name, int $bedCount): Room {
-			$this->validateRoomArguments($roomTypeId, $name, $bedCount);
+use Exception\InfoException;
+use Model\Room;
+use Model\RoomType;
 
-			$room               = new Room();
-			$room->room_type_id = $roomTypeId;
-			$room->name         = $name;
-			$room->bed_count    = $bedCount;
-			$room->save();
+class RoomModelManager {
+	/**
+	 * @param int $roomTypeId
+	 * @param string $name
+	 * @param int $bedCount
+	 *
+	 * @return \Model\Room
+	 */
+	public function createRoom(int $roomTypeId, string $name, int $bedCount): Room {
+		$this->validateRoomArguments($roomTypeId, $name, $bedCount);
 
-			if ($room->room_id === null) {
-				throw new InfoException('Zimmer konnte nicht erstellt werden');
-			}
+		$room               = new Room();
+		$room->room_type_id = $roomTypeId;
+		$room->name         = $name;
+		$room->bed_count    = $bedCount;
+		$room->save();
 
-			return $room;
+		if ($room->room_id === null) {
+			throw new InfoException('Zimmer konnte nicht erstellt werden');
 		}
 
-		/**
-		 * @param int $id
-		 * @param int $roomTypeId
-		 * @param string $name
-		 * @param int $bedCount
-		 *
-		 * @return \Model\Room
-		 */
-		public function updateRoom(int $id, int $roomTypeId, string $name, int $bedCount): Room {
-			$this->validateRoomArguments($roomTypeId, $name, $bedCount);
+		return $room;
+	}
 
-			$room = Room::where('room_id', '=', $id)->first();
+	/**
+	 * @param int $id
+	 * @param int $roomTypeId
+	 * @param string $name
+	 * @param int $bedCount
+	 *
+	 * @return \Model\Room
+	 */
+	public function updateRoom(int $id, int $roomTypeId, string $name, int $bedCount): Room {
+		$this->validateRoomArguments($roomTypeId, $name, $bedCount);
 
-			if (!isset($room)) {
-				throw new InfoException('Zimmer wurde nicht gefunden');
-			}
+		$room = Room::where('room_id', '=', $id)->first();
 
-			$room->room_type_id = $roomTypeId;
-			$room->name         = $name;
-			$room->bed_count    = $bedCount;
-			$room->save();
-
-			return $room;
+		if (!isset($room)) {
+			throw new InfoException('Zimmer wurde nicht gefunden');
 		}
 
-		/**
-		 * @param int $roomTypeId
-		 * @param string $name
-		 * @param int $bedCount
-		 *
-		 * @return void
-		 */
-		public function validateRoomArguments(int $roomTypeId, string $name, int $bedCount): void {
-			if (!RoomType::where('room_type_id', '=', $roomTypeId)->exists()) {
-				throw new InfoException('Unbekannte Zimmerart');
-			}
+		$room->room_type_id = $roomTypeId;
+		$room->name         = $name;
+		$room->bed_count    = $bedCount;
+		$room->save();
 
-			if (trim($name) === '') {
-				throw new InfoException('Es muss ein Name eingegeben werden');
-			}
+		return $room;
+	}
 
-			if ($bedCount <= 0) {
-				throw new InfoException('Es muss eine Bettenanzahl größer 0 eingegeben werden');
-			}
+	/**
+	 * @param int $roomTypeId
+	 * @param string $name
+	 * @param int $bedCount
+	 *
+	 * @return void
+	 */
+	public function validateRoomArguments(int $roomTypeId, string $name, int $bedCount): void {
+		if (!RoomType::where('room_type_id', '=', $roomTypeId)->exists()) {
+			throw new InfoException('Unbekannte Zimmerart');
+		}
+
+		if (trim($name) === '') {
+			throw new InfoException('Es muss ein Name eingegeben werden');
+		}
+
+		if ($bedCount <= 0) {
+			throw new InfoException('Es muss eine Bettenanzahl größer 0 eingegeben werden');
 		}
 	}
-?>
+}
