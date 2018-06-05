@@ -46,12 +46,11 @@
 								<td class="center">20:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="purple center" rowspan="4">Nachtwanderung</td>
 							</tr>
 
 							<tr>
 								<td class="center">21:00</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -60,8 +59,7 @@
 							<tr>
 								<td class="center">22:00</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="deep-orange center" rowspan="3">Lagerfeuer</td>
 								<td class="center">-</td>
 							</tr>
 
@@ -69,13 +67,10 @@
 								<td class="center">23:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">00:00</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>

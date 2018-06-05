@@ -47,7 +47,7 @@
 
 							<tr>
 								<td class="center">13:00</td>
-								<td class="center">-</td>
+								<td class="yellow darken-3 center">Auswertung<br />Schnitzeljagd</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
