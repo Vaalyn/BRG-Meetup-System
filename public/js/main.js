@@ -142,6 +142,10 @@ $(document).ready(function() {
 	});
 
 	$('#registration .submit').on('click', function() {
+		if (window.grecaptcha.getResponse()) {
+			grecaptcha.reset();
+		}
+
 		grecaptcha.execute();
 	});
 
