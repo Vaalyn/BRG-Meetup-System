@@ -36,7 +36,7 @@ class WaitingListModelManager {
 	 *
 	 * @return void
 	 */
-	private function validateEntry(string $username, string $email): void {
+	protected function validateEntry(string $username, string $email): void {
 		if (trim($username) === '') {
 			throw new InfoException('Es muss eine Username eingegeben werden');
 		}

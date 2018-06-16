@@ -83,11 +83,52 @@ class Auth implements AuthInterface {
 	}
 
 	/**
+	 * @return void
+	 */
+	public function invalidateAuthTokens(): void {
+		$invalidationDateTime = new Carbon();
+		$invalidationDateTime->subSeconds($this->container->config['auth']['cookie']['expire']);
+
+		$authTokens = AuthToken::where('created_at', '<', $invalidationDateTime->toDateTimeString())->get();
+
+		foreach ($authTokens as $authToken) {
+			$this->invalidateAuthToken($authToken);
+		}
+	}
+
+	/**
+	 * @param \Model\AuthToken $authToken
+	 *
+	 * @return void
+	 */
+	public function invalidateAuthToken(AuthToken $authToken): void {
+		$authToken->delete();
+	}
+
+	/**
+	 * @return void
+	 */
+	public function logout(): void {
+		unset($_COOKIE[$this->container->config['auth']['cookie']['name']]);
+		setcookie(
+			$this->container->config['auth']['cookie']['name'],
+			'',
+			time() - 3600,
+			'/',
+			$this->container->config['auth']['cookie']['domain'],
+			$this->container->config['auth']['cookie']['secure'],
+			$this->container->config['auth']['cookie']['httponly']
+		);
+
+		$this->container->session->destroy();
+	}
+
+	/**
 	 * @param \Model\User $user
 	 *
 	 * @return void
 	 */
-	private function setLoginCookie(User $user): void {
+	protected function setLoginCookie(User $user): void {
 		setcookie(
 			$this->container->config['auth']['cookie']['name'],
 			json_encode([
@@ -107,7 +148,7 @@ class Auth implements AuthInterface {
 	 *
 	 * @return string
 	 */
-	private function generateLoginCookieToken(User $user): string {
+	protected function generateLoginCookieToken(User $user): string {
 		$token = bin2hex(random_bytes(16));
 
 		$browserParser = new Parser(getallheaders());
@@ -137,30 +178,7 @@ class Auth implements AuthInterface {
 	/**
 	 * @return void
 	 */
-	public function invalidateAuthTokens(): void {
-		$invalidationDateTime = new Carbon();
-		$invalidationDateTime->subSeconds($this->container->config['auth']['cookie']['expire']);
-
-		$authTokens = AuthToken::where('created_at', '<', $invalidationDateTime->toDateTimeString())->get();
-
-		foreach ($authTokens as $authToken) {
-			$this->invalidateAuthToken($authToken);
-		}
-	}
-
-	/**
-	 * @param \Model\AuthToken $authToken
-	 *
-	 * @return void
-	 */
-	public function invalidateAuthToken(AuthToken $authToken): void {
-		$authToken->delete();
-	}
-
-	/**
-	 * @return void
-	 */
-	private function checkLoginCookie(): void {
+	protected function checkLoginCookie(): void {
 		$this->invalidateAuthTokens();
 
 		if (isset($_COOKIE[$this->container->config['auth']['cookie']['name']])) {
@@ -177,23 +195,5 @@ class Auth implements AuthInterface {
 				}
 			}
 		}
-	}
-
-	/**
-	 * @return void
-	 */
-	public function logout(): void {
-		unset($_COOKIE[$this->container->config['auth']['cookie']['name']]);
-		setcookie(
-			$this->container->config['auth']['cookie']['name'],
-			'',
-			time() - 3600,
-			'/',
-			$this->container->config['auth']['cookie']['domain'],
-			$this->container->config['auth']['cookie']['secure'],
-			$this->container->config['auth']['cookie']['httponly']
-		);
-
-		$this->container->session->destroy();
 	}
 }
