@@ -20,12 +20,19 @@ class UserModelManager {
 	protected $meetupDate;
 
 	/**
+	 * @var \Model\Manager\UserInfoModelManager
+	 */
+	protected $userInfoModelManager;
+
+	/**
 	 * @param \Service\Auth\AuthInterface $auth
 	 * @param string $meetupDate
 	 */
 	public function __construct(AuthInterface $auth, string $meetupDate) {
 		$this->auth       = $auth;
 		$this->meetupDate = $meetupDate;
+
+		$this->userInfoModelManager = new UserInfoModelManager($auth, $meetupDate);
 	}
 
 	/**
@@ -52,6 +59,13 @@ class UserModelManager {
 		$this->validatePassword($password);
 		$this->validateEmail($email);
 
+		$this->userInfoModelManager->validateUserInfo(
+			$firstName,
+			$lastName,
+			$birthday,
+			$genderId
+		);
+
 		$user           = new User();
 		$user->username = trim($username);
 		$user->password = password_hash($password, PASSWORD_DEFAULT);
@@ -64,12 +78,7 @@ class UserModelManager {
 		}
 
 		try {
-			$userInfoModelManager = new UserInfoModelManager(
-				$this->auth,
-				$this->meetupDate
-			);
-
-			$userInfoModelManager->createUserInfo(
+			$this->userInfoModelManager->createUserInfo(
 				$user,
 				$firstName,
 				$lastName,
@@ -170,7 +179,7 @@ class UserModelManager {
 	 *
 	 * @return int
 	 */
-	private function getPasswordStrength(string $password, array $userData = []): int {
+	protected function getPasswordStrength(string $password, array $userData = []): int {
 		$zxcvbn = new Zxcvbn();
 		$strength = $zxcvbn->passwordStrength($password, $userData);
 

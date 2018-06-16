@@ -45,8 +45,11 @@ class UserInfoModelManager {
 		string $birthday,
 		int $genderId
 	): UserInfo {
+		if (!isset($user->user_id)) {
+			throw new InfoException('Unbekannter Benutzer');
+		}
+
 		$this->validateUserInfo(
-			$user,
 			$firstName,
 			$lastName,
 			$birthday,
@@ -107,7 +110,6 @@ class UserInfoModelManager {
 	}
 
 	/**
-	 * @param \Model\User $user
 	 * @param string $firstName
 	 * @param string $lastName
 	 * @param string $birthday
@@ -115,17 +117,12 @@ class UserInfoModelManager {
 	 *
 	 * @return void
 	 */
-	private function validateUserInfo(
-		User $user,
+	public function validateUserInfo(
 		string $firstName,
 		string $lastName,
 		string $birthday,
 		int $genderId
 	): void {
-		if (!isset($user->user_id)) {
-			throw new InfoException('Unbekannter Benutzer');
-		}
-
 		if (trim($firstName) === '') {
 			throw new InfoException('Es muss eine Vorname eingegeben werden');
 		}
@@ -171,7 +168,7 @@ class UserInfoModelManager {
 	 *
 	 * @return bool
 	 */
-	private function isYearsAgoOnMeetup(string $datetime, int $years): bool {
+	protected function isYearsAgoOnMeetup(string $datetime, int $years): bool {
 		$birthdayDateTime                 = \DateTime::createFromFormat('Y-m-d', $datetime);
 		$meetupDateTime                   = \DateTime::createFromFormat('Y-m-d', $this->meetupDate);
 		$timeToMeetupInterval             = $meetupDateTime->diff(new \DateTime());
