@@ -5,6 +5,7 @@ namespace Routes\Api\Backoffice;
 use Exception\InfoException;
 use Model\Booking;
 use Model\Manager\BookingModelManager;
+use Model\Manager\UserInfoModelManager;
 use Model\Room;
 use Model\User;
 use Psr\Container\ContainerInterface;
@@ -308,10 +309,20 @@ class BookingController {
 			'Zimmer',
 			'Allergien',
 			'Mitbringsel',
-			'Nachtwanderung'
+			'Nachtwanderung',
+			'Volljährig zum Meetup'
 		]);
 
+		$userInfoModelManager = new UserInfoModelManager(
+			$this->container->auth,
+			$this->container->config['meetupDate']
+		);
+
 		foreach ($bookings as $booking) {
+			$isEighteenOnMeetup = $userInfoModelManager->isUserEighteenOnMeetup(
+				$booking->user->userInfo->birthday->format('Y-m-d')
+			);
+
 			$csvEntry = [
 				$booking->user->userInfo->first_name,
 				$booking->user->userInfo->last_name,
@@ -319,7 +330,8 @@ class BookingController {
 				$booking->room->name,
 				$booking->bookingInfo->allergies,
 				$booking->bookingInfo->stuff,
-				$booking->bookingInfo->night_hike
+				$booking->bookingInfo->night_hike,
+				$isEighteenOnMeetup
 			];
 
 			fputcsv($temporaryCsvFile, $csvEntry);
