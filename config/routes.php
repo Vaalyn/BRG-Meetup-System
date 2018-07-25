@@ -1,7 +1,7 @@
 <?php
 
-use Routes\Api;
-use Routes\Frontend;
+use BronyRadioGermany\Meetup\Routes\Api;
+use BronyRadioGermany\Meetup\Routes\Frontend;
 
 $app->group('/api', function() {
 	$this->post('/booking/enable', Api\Backoffice\SettingController::class . ':enableBookingProcessAction')->setName('api.backoffice.booking.enable');

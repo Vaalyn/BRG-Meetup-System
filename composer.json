@@ -18,11 +18,7 @@
     },
 	"autoload": {
         "psr-4": {
-			"Exception\\": "exception",
-			"Middleware\\": "middleware",
-			"Model\\": "model",
-			"Routes\\": "routes",
-            "Service\\": "service"
+			"BronyRadioGermany\\Meetup\\": "src"
         }
     }
 }
