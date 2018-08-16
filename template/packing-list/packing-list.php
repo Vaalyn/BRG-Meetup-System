@@ -20,7 +20,7 @@
 
 										<ul class="browser-default">
 											<li>
-												Bettwäsche komplett (alternativ Schlafsack und Bettlaken)
+												Bettwäsche: Bettlaken, Kissen- und Deckenbezug
 											</li>
 											<li>
 												Hausschuhe/Badelatschen (für Innenbereich bei schlecht Wetter)
@@ -35,7 +35,7 @@
 												Handtuch
 											</li>
 											<li>
-												Duschshampoo
+												Duschutensilien (Duschgel/Shampoo)
 											</li>
 											<li>
 												Unterwäsche
@@ -47,13 +47,7 @@
 												Zahnputzzeug (Zahnbürste, Zahnpasta)
 											</li>
 											<li>
-												Ersatz-T-Shirt
-											</li>
-											<li>
-												Schlafanzug
-											</li>
-											<li>
-												Ersatz-Hose
+												Wechselkleidung
 											</li>
 											<li>
 												Reiseverpflegung

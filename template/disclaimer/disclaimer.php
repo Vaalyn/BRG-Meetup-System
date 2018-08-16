@@ -41,7 +41,7 @@
 										</li>
 
 										<li>
-											Bettwäsche ist selbst mitzubringen (Bettlaken, Bezüge für Kissen und Decke), mindestens jedoch ein Bettlaken und Schlafsack, oder gegen eine Gebühr (6 Euro) vor Ort zu leihen.
+											Bettwäsche ist selbst mitzubringen (Bettlaken, Bezüge für Kissen und Decke), mindestens jedoch ein Bettlaken und Schlafsack, oder gegen eine Gebühr (7 Euro) vor Ort zu leihen.
 										</li>
 
 										<li>
