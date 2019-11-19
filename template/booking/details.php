@@ -185,7 +185,7 @@
 							<h3 class="card-title center">Buchungs<wbr/>informationen</h3>
 							<div class="divider"></div>
 
-							<div class="row">
+							<div class="row hide">
 								<div class="col s12 input-field">
 									<?php if ($bookingIsActive) : ?>
 										<textarea id="allergies" class="materialize-textarea"><?php
@@ -203,19 +203,19 @@
 							<div class="row">
 								<div class="col s12 input-field">
 									<?php if ($bookingIsActive) : ?>
-										<textarea id="stuff" class="materialize-textarea" placeholder="Trage hier etwas ein, was du zum Meetup mitbringen möchtest und allen Teilnehmern zur Verfügung stellen willst. Beispiele wären Brettspiele oder Geräte zur körperlichen Betätigung, auch Dinge, welche eventuell zum Verzehr gedacht sind."><?php
+										<textarea id="stuff" class="materialize-textarea" placeholder="Hast du Allergien?&#10;Bringst du was mit?&#10;Besondere Wünsche?"><?php
 											echo htmlentities($user->booking->bookingInfo->stuff);
 										?></textarea>
 									<?php else : ?>
-										<textarea id="stuff" class="materialize-textarea" placeholder="Trage hier etwas ein, was du zum Meetup mitbringen möchtest und allen Teilnehmern zur Verfügung stellen willst. Beispiele wären Brettspiele oder Geräte zur körperlichen Betätigung, auch Dinge, welche eventuell zum Verzehr gedacht sind." readonly><?php
+										<textarea id="stuff" class="materialize-textarea" placeholder="Hast du Allergien?&#10;Bringst du was mit?&#10;Besondere Wünsche?" readonly><?php
 											echo htmlentities($user->booking->bookingInfo->stuff);
 										?></textarea>
 									<?php endif; ?>
-									<label for="stuff">Mitbringsel</label>
+									<label for="stuff">Möchtest du uns noch was mitteilen?</label>
 								</div>
 							</div>
 
-							<div class="row">
+							<div class="row hide">
 								<div class="col s12 input-field">
 									<?php if ($bookingIsActive) : ?>
 										<textarea id="wishes" class="materialize-textarea" placeholder="Hast du besondere Wünsche, welche die Verpflegung oder Aktivitäten betrifft, trage diese bitte hier ein. Wir werden dann sehen ob sich diese umsetzen lassen."><?php
@@ -275,7 +275,7 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row hide">
 					<div class="col s12 center">
 						<input name="couple" id="couple" class="filled-in" type="checkbox" />
 						<label for="couple">Doppelzimmer für dich und deinen Partner/Partnerin buchen?</label>

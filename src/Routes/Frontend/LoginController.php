@@ -62,7 +62,7 @@ class LoginController {
 		$rememberMe = isset($request->getParsedBody()['remember_me']) ? true : false;
 
 		if (!$this->container->auth->attempt($username, $password, $rememberMe)) {
-			$this->container->flash->addMessage('Login error', 'Username or password incorrect');
+			$this->container->flash->addMessage('Login Error', 'Benutzername oder Passwort falsch');
 			return $response->withRedirect($this->container->router->pathFor('login'));
 		}
 

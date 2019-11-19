@@ -30,7 +30,7 @@ class GalleryController {
 		$year = null;
 		$images = [];
 
-		if (isset($args['year']) && in_array($args['year'], ['2016', '2017'])) {
+		if (isset($args['year']) && in_array($args['year'], ['2016', '2017', '2018'])) {
 			$year = $args['year'];
 		}
 

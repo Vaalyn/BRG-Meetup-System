@@ -7,12 +7,12 @@
 						<div class="card-content grey-text text-lighten-2">
 							<h3 class="card-title center">Einverständnis- und Verzichtserklärung, Veranstaltungsregeln sowie Haftungsfreistellung</h3>
 							<div class="divider"></div>
-							<h6 class="center">Für die Veranstaltung des Brony Radio Germany e.V. "BRG Meetup" vom 31.08. - 02.09.2018 in Seitenroda.</h6>
+							<h6 class="center">Für die Veranstaltung des Brony Radio Germany e.V. "BRG Meetup" vom 08.05. - 10.05.2020 in Seitenroda.</h6>
 
 							<div class="row">
 								<div class="col s12">
 									<p>
-										Das Brony Radio Germany Meetup 2018 ist eine private Veranstaltung des "Brony Radio Germany e.V." (im folgenden BRG e.V. genannt) für angemeldete, geladene und bestätigte Besucher und Fans der Serie "My Little Pony – Friendship is Magic" und deren Gäste. Die Teilnahme an der Veranstaltung als Besucher geschieht auf eigene Gefahr.
+										Das Brony Radio Germany Meetup 2020 ist eine private Veranstaltung des "Brony Radio Germany e.V." (im folgenden BRG e.V. genannt) für angemeldete, geladene und bestätigte Besucher und Fans der Serie "My Little Pony – Friendship is Magic" und deren Gäste. Die Teilnahme an der Veranstaltung als Besucher geschieht auf eigene Gefahr.
 									</p>
 									<p>
 										Die ehrenamtlichen Veranstalter und deren unterstützende Helfer haften weder vertraglich noch auf sonstige Art für irgendwelche Schäden, die von Besuchern verursacht werden und/oder ihm oder Dritten im Zusammenhang mit dem Besuch entstehen, es sei denn der Veranstalter oder deren Helfer handeln vorsätzlich oder grob fahrlässig.

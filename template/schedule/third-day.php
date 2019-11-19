@@ -1,6 +1,6 @@
 <div class="card color-3">
 	<div class="card-content grey-text text-lighten-2">
-		<h3 class="card-title center">Dritter Tag (02.09.2018)</h3>
+		<h3 class="card-title center">Dritter Tag (10.05.2020)</h3>
 		<div class="divider"></div>
 
 		<div class="row">
@@ -20,7 +20,7 @@
 						<tbody>
 							<tr>
 								<td class="center">09:00</td>
-								<td class="blue center" rowspan="3">Frühstück</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -31,6 +31,7 @@
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
@@ -38,16 +39,20 @@
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">12:00</td>
-								<td class="orange darken-1 center" colspan="4">Zimmerabnahme</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">13:00</td>
-								<td class="yellow darken-3 center">Auswertung<br />Schnitzeljagd</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>

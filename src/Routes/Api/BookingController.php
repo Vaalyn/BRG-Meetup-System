@@ -45,6 +45,7 @@ class BookingController {
 		$coupleCode  = $request->getParsedBody()['couple_code'] ?? '';
 		$roomId      = (int) $request->getParsedBody()['room_id'] ?? 0;
 		$nightHike   = isset($request->getParsedBody()['night_hike']);
+		$bedding     = isset($request->getParsedBody()['bedding']);
 
 		try {
 			$bookingIsActive = (bool) Setting::where('setting_code', '=', 'booking_active')->first()->value;
@@ -68,7 +69,8 @@ class BookingController {
 				$couple,
 				$coupleCode,
 				$roomId,
-				$nightHike
+				$nightHike,
+				$bedding
 			);
 
 			$user = $this->container->auth->user();

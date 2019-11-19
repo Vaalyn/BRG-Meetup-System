@@ -1,6 +1,6 @@
 <div class="card color-3">
 	<div class="card-content grey-text text-lighten-2">
-		<h3 class="card-title center">Erster Tag (31.08.2018)</h3>
+		<h3 class="card-title center">Erster Tag (08.05.2020)</h3>
 		<div class="divider"></div>
 
 		<div class="row">
@@ -21,14 +21,14 @@
 							<tr>
 								<td class="center">Ab 12:00</td>
 								<td class="center">-</td>
-								<td class="orange darken-1 center">Anreise</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">18:00</td>
-								<td class="green center">Eröffnung</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -36,7 +36,7 @@
 
 							<tr>
 								<td class="center">19:00</td>
-								<td class="blue center" rowspan="2">Abendessen</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -46,11 +46,13 @@
 								<td class="center">20:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="purple center" rowspan="4">Nachtwanderung</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">21:00</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -59,7 +61,8 @@
 							<tr>
 								<td class="center">22:00</td>
 								<td class="center">-</td>
-								<td class="deep-orange center" rowspan="3">Lagerfeuer</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
 
@@ -67,10 +70,13 @@
 								<td class="center">23:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">00:00</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>

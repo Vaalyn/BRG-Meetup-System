@@ -188,7 +188,7 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row hide">
 					<div class="col s12 input-field">
 						<textarea id="allergies" class="materialize-textarea" readonly></textarea>
 						<label for="allergies">Allergien</label>
@@ -198,11 +198,11 @@
 				<div class="row">
 					<div class="col s12 input-field">
 						<textarea id="stuff" class="materialize-textarea" readonly></textarea>
-						<label for="stuff">Mitbringsel</label>
+						<label for="stuff">Möchtest du uns noch was mitteilen?</label>
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row hide">
 					<div class="col s12 input-field">
 						<textarea id="wishes" class="materialize-textarea" readonly></textarea>
 						<label for="wishes">Wünsche</label>

@@ -31,28 +31,7 @@
 							<div class="divider"></div>
 
 							<form>
-								<div class="row">
-									<div class="col s12 input-field">
-										<textarea name="allergies" id="allergies" class="materialize-textarea"></textarea>
-										<label for="allergies">Auf welche Allergien/Unverträglichkeiten müssen wir für dich achten?</label>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col s12 input-field">
-										<textarea name="stuff" id="stuff" class="materialize-textarea" placeholder="Trage hier etwas ein, was du zum Meetup mitbringen möchtest und allen Teilnehmern zur Verfügung stellen willst. Beispiele wären Brettspiele oder Geräte zur körperlichen Betätigung, auch Dinge, welche eventuell zum Verzehr gedacht sind."></textarea>
-										<label for="stuff">Möchtest du für die Teilnehmer des Meetup etwas mitbringen?</label>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col s12 input-field">
-										<textarea name="wishes" id="wishes" class="materialize-textarea" placeholder="Hast du besondere Wünsche, welche die Verpflegung oder Aktivitäten betrifft, trage diese bitte hier ein. Wir werden dann sehen ob sich diese umsetzen lassen."></textarea>
-										<label for="wishes">Welche Wünsche hast du an das Meetup?</label>
-									</div>
-								</div>
-
-								<div class="row">
+								<div class="row hide">
 									<div class="col s12 center">
 										<input name="couple" id="couple" class="filled-in" type="checkbox" />
 										<label for="couple">Doppelzimmer für dich und deinen Partner/Partnerin buchen?</label>
@@ -132,11 +111,39 @@
 									</div>
 								</div>
 
+								<div class="row">
+									<div class="col s12 input-field">
+										<textarea name="stuff" id="stuff" class="materialize-textarea" placeholder="Hast du Allergien?&#10;Bringst du was mit?&#10;Besondere Wünsche?"></textarea>
+										<label for="stuff">Möchtest du uns noch was mitteilen?</label>
+									</div>
+								</div>
+
+								<div class="row hide">
+									<div class="col s12 input-field">
+										<textarea name="allergies" id="allergies" class="materialize-textarea"></textarea>
+										<label for="allergies">Auf welche Allergien/Unverträglichkeiten müssen wir für dich achten?</label>
+									</div>
+								</div>
+
+								<div class="row hide">
+									<div class="col s12 input-field">
+										<textarea name="wishes" id="wishes" class="materialize-textarea" placeholder="Hast du besondere Wünsche, welche die Verpflegung oder Aktivitäten betrifft, trage diese bitte hier ein. Wir werden dann sehen ob sich diese umsetzen lassen."></textarea>
+										<label for="wishes">Welche Wünsche hast du an das Meetup?</label>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col s12 center">
+										<input name="bedding" id="bedding" class="filled-in" type="checkbox" />
+										<label for="bedding">Mir ist bewusst, dass ich Bettwäsche und Bettlaken (oder Schlafsack und Bettlaken) selbst mit zu bringen habe. Wenn ich diese nicht selbst mitbringe sind von mir 7 Euro Leihgebühren für Leibettwäsche zu entrichten.</label>
+									</div>
+								</div>
+
 								<?php if ($availableNightHikePlaces > 0) : ?>
 									<div class="row">
 										<div class="col s12 center">
 											<input name="night_hike" id="night-hike" class="filled-in" type="checkbox" />
-											<label for="night-hike">Möchtest du an der Nachtwanderung teilnehmen?</label>
+											<label for="night-hike">Ich möchte an der Nachtwanderung teilnehmen.</label>
 										</div>
 									</div>
 

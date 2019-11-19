@@ -24,6 +24,12 @@
 										<a href="gallerie/2017" class="btn color-1">Galerie 2017</a>
 									</div>
 								</div>
+
+								<div class="row">
+									<div class="col s12 center">
+										<a href="gallerie/2018" class="btn color-1">Galerie 2018</a>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
