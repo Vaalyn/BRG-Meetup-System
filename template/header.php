@@ -22,10 +22,10 @@
 
 	<div class="parallax-container">
 		<div class="parallax hide-on-small-only">
-			<img src="img/header.jpg" alt="Brony Radio Germany - Where Bronies Come Together">
+			<img src="img/header.png" alt="Brony Radio Germany - Where Bronies Come Together">
 		</div>
 
 		<div class="parallax hide-on-med-and-up">
-			<img src="img/header-mobile.jpg" alt="Brony Radio Germany - Where Bronies Come Together">
+			<img src="img/header-mobile.png" alt="Brony Radio Germany - Where Bronies Come Together">
 		</div>
 	</div>
