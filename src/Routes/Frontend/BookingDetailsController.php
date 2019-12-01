@@ -58,10 +58,7 @@ class BookingDetailsController {
 
 			case 'female':
 				if ($this->container->config['allowUnisexRooms']) {
-					$roomsSingle = $rooms->where([
-						['roomType.type_code', '=', 'normal'],
-						['roomType.type_code', '=', 'female']
-					]);
+					$roomsSingle = $rooms->whereIn('roomType.type_code', ['normal', 'female']);
 				}
 				else {
 					$roomsSingle = $rooms->where('roomType.type_code', '=', 'female');
