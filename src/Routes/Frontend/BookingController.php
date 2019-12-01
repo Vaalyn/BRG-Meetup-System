@@ -67,24 +67,21 @@ class BookingController {
 
 		$isUserUnderage = !$userInfoModelManager->isUserEighteenOnMeetup($user->userInfo->birthday->format('Y-m-d'));
 
-		$rooms       = Room::with(['roomType']);
-		$roomsCouple = $rooms->where('room_type.type_code', '=', 'couple');
+		$rooms       = Room::with(['roomType'])->get();
+		$roomsCouple = $rooms->where('roomType.type_code', '=', 'couple');
 		$roomsSingle = [];
 
 		switch ($user->userInfo->gender->gender_code) {
 			case 'male':
-				$roomsSingle = $rooms->where('room_type.type_code', '=', 'normal')->get();
+				$roomsSingle = $rooms->where('roomType.type_code', '=', 'normal');
 				break;
 
 			case 'female':
 				if ($this->container->config['allowUnisexRooms']) {
-					$roomsSingle = $rooms->where([
-						['room_type.type_code', '=', 'normal'],
-						['room_type.type_code', '=', 'female']
-					])->get();
+					$roomsSingle = $rooms->whereIn('roomType.type_code', ['normal', 'female']);
 				}
 				else {
-					$roomsSingle = $rooms->where('room_type.type_code', '=', 'female')->get();
+					$roomsSingle = $rooms->where('roomType.type_code', '=', 'female');
 				}
 				break;
 		}
