@@ -166,7 +166,7 @@
 									</p>
 									<?php
 										echo sprintf(
-											'<b>%s %s | %s | BRG Meetup %s</b>',
+											'<b>%s %s, %s, BRG Meetup %s</b>',
 											htmlentities($user->userInfo->first_name),
 											htmlentities($user->userInfo->last_name),
 											htmlentities($user->username),

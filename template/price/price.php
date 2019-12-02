@@ -75,7 +75,7 @@
 											Gib als Betreff bei der Überweisung folgendes ein damit wir die Bezahlung deiner Anmeldung zuordnen können:<br />
 											<?php
 												echo sprintf(
-													'<b>Vorname Nachname | Username | BRG Meetup %s</b>',
+													'<b>Vorname Nachname, Username, BRG Meetup %s</b>',
 													$meetupYear
 												);
 											?>
