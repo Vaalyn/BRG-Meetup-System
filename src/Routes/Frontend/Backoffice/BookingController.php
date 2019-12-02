@@ -28,9 +28,9 @@ class BookingController {
 	 * @return \Slim\Http\Response
 	 */
 	public function __invoke(Request $request, Response $response, array $args): Response {
-		$bookings = Booking::join('user', 'booking.user_id', '=', 'user.user_id')
-			->orderBy('username')
-			->get();
+		$bookings = Booking::with(['user', 'bookingInfo', 'room'])
+			->get()
+			->sortBy('user.username');
 
 		return $this->container->renderer->render($response, '/backoffice/booking/booking.php', [
 			'request' => $request,
