@@ -20,47 +20,38 @@
 						<tbody>
 							<tr>
 								<td class="center">Ab 12:00</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center light-blue darken-1" colspan="4">Anreise</td>
 							</tr>
 
 							<tr>
 								<td class="center">18:00</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center green" colspan="2">Eröffnung</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">19:00</td>
+								<td class="center blue darken-1" rowspan="2">Abendessen</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center orange darken-2" rowspan="3">Karaoke / Trotmania</td>
 								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">20:00</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center purple" rowspan="3">Nachtwanderung</td>
 							</tr>
 
 							<tr>
 								<td class="center">21:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">22:00</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>

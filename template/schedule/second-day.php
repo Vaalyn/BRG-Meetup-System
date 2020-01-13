@@ -20,7 +20,7 @@
 						<tbody>
 							<tr>
 								<td class="center">09:00</td>
-								<td class="center">-</td>
+								<td class="center blue darken-1" rowspan="3">Frühstück</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -29,15 +29,12 @@
 							<tr>
 								<td class="center">10:00</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center orange darken-2" rowspan="12">Karaoke / Trotmania</td>
 								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">11:00</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
@@ -46,14 +43,11 @@
 								<td class="center">12:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center yellow darken-3" rowspan="4">Besuch der Leuchtenburg</td>
 							</tr>
 
 							<tr>
 								<td class="center">13:00</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
@@ -62,22 +56,17 @@
 								<td class="center">14:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">15:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">16:00</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center purple" rowspan="2">Jasters Verlosungs<wbr>show</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
@@ -86,39 +75,28 @@
 								<td class="center">17:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">18:00</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center blue darken-1" colspan="2" rowspan="3">Grillen</td>
 								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">19:00</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">20:00</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">21:00</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center red darken-3" rowspan="4">Lagerfeuer</td>
 								<td class="center">-</td>
 							</tr>
 
@@ -126,22 +104,17 @@
 								<td class="center">22:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center green darken-2" rowspan="3">?</td>
 							</tr>
 
 							<tr>
 								<td class="center">23:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">00:00</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>

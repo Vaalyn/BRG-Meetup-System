@@ -20,7 +20,7 @@
 						<tbody>
 							<tr>
 								<td class="center">09:00</td>
-								<td class="center">-</td>
+								<td class="center blue darken-1" rowspan="3">Frühstück</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -31,7 +31,6 @@
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
@@ -39,15 +38,11 @@
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">12:00</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center purple" colspan="4">Zimmerabnahme</td>
 							</tr>
 
 							<tr>
