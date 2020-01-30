@@ -34,7 +34,7 @@ class LoginController {
 		if (!$this->container->auth->attempt($username, $password, $rememberMe)) {
 			return $response->write(json_encode(array(
 				'status' => 'error',
-				'errors' => $exception->getMessage()
+				'errors' => 'Benutzername oder Passwort ungültig'
 			)));
 		}
 
