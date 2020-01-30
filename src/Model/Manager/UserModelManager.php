@@ -55,6 +55,8 @@ class UserModelManager {
 		string $birthday,
 		int $genderId
 	): User {
+		$username = trim($username);
+
 		$this->validateUsername($username);
 		$this->validatePassword($password);
 		$this->validateEmail($email);
@@ -67,7 +69,7 @@ class UserModelManager {
 		);
 
 		$user           = new User();
-		$user->username = trim($username);
+		$user->username = $username;
 		$user->password = password_hash($password, PASSWORD_DEFAULT);
 		$user->is_admin = false;
 		$user->email    = trim($email);
@@ -131,15 +133,11 @@ class UserModelManager {
 	 * @return void
 	 */
 	public function validateUsername(string $username): void {
-		if (trim($username) === '') {
+		if ($username === '') {
 			throw new InfoException('Es muss ein Benutzername eingegeben werden');
 		}
 
-		if (
-			User::where('username', '=', trim($username))->exists()
-			&& $this->auth->user() !== null
-			&& trim($username) !== $this->auth->user()->username
-		) {
+		if (User::where('username', '=', $username)->exists()) {
 			throw new InfoException('Es existiert bereits ein Benutzer mit diesem Namen');
 		}
 	}
