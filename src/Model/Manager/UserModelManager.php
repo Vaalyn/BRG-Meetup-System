@@ -136,9 +136,9 @@ class UserModelManager {
 		}
 
 		if (
-			User::where('username', '=', $username)->exists()
+			User::where('username', '=', trim($username))->exists()
 			&& $this->auth->user() !== null
-			&& $username !== $this->auth->user()->username
+			&& trim($username) !== $this->auth->user()->username
 		) {
 			throw new InfoException('Es existiert bereits ein Benutzer mit diesem Namen');
 		}
