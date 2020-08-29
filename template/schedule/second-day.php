@@ -1,6 +1,6 @@
 <div class="card color-3">
 	<div class="card-content grey-text text-lighten-2">
-		<h3 class="card-title center">Zweiter Tag (09.05.2020)</h3>
+		<h3 class="card-title center">Zweiter Tag (08.05.2021)</h3>
 		<div class="divider"></div>
 
 		<div class="row">
