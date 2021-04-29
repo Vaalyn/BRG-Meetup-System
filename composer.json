@@ -2,7 +2,7 @@
     "require": {
         "slim/slim": "^3.8",
         "slim/php-view": "^2.2",
-        "illuminate/database": "^5.5",
+        "illuminate/database": "^6.20",
         "slim/flash": "^0.2.0",
 		"robmorgan/phinx": "^0.9.1",
         "league/flysystem": "^1.0",
