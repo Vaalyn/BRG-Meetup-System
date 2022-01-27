@@ -62,7 +62,7 @@
 										<div class="divider"></div>
 
 										<p>
-											Der nächste Bahnhof heißt ???.
+											Der nächste Bahnhof ist in 37441 Bad Sachsa.
 										</p>
 									</div>
 								</div>
