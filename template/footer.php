@@ -23,7 +23,6 @@
 			<div class="footer-copyright">
 				<div class="container">
 					© <?php echo date('Y'); ?> Brony Radio Germany e.V.
-					<a class="grey-text text-lighten-4 right" href="https://vaachar.de">Developed by VaaChar</a>
 				</div>
 			</div>
 		</footer>
