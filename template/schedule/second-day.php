@@ -29,7 +29,7 @@
 							<tr>
 								<td class="center">10:00</td>
 								<td class="center">-</td>
-								<td class="center orange darken-2" rowspan="12">Karaoke / Trotmania</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
 
@@ -37,13 +37,14 @@
 								<td class="center">11:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
+								<td class="center orange darken-2">Poker-Turnier</td>
 							</tr>
 
 							<tr>
 								<td class="center">12:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center yellow darken-3" rowspan="4">Besuch der Leuchtenburg</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
@@ -62,10 +63,11 @@
 								<td class="center">15:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
+								<td class="center yellow darken-3">Dance Battle</td>
 							</tr>
 
 							<tr>
-								<td class="center">16:00</td>
+								<td class="center">16:30</td>
 								<td class="center purple" rowspan="2">Jasters Verlosungs<wbr>show</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -96,7 +98,7 @@
 							<tr>
 								<td class="center">21:00</td>
 								<td class="center">-</td>
-								<td class="center red darken-3" rowspan="4">Lagerfeuer</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
 
@@ -104,11 +106,12 @@
 								<td class="center">22:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center green darken-2" rowspan="3">?</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">23:00</td>
+								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
