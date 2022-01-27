@@ -1,3 +1,8 @@
+meetup.env
+docker-compose.yml
+
+/docker/mariadb/data/*
+
 /config/config.php
 /files/cache/*
 !/files/cache/.gitkeep

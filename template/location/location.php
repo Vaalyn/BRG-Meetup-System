@@ -15,7 +15,7 @@
 								<div class="row">
 									<div class="col s12 textblock">
 										<p>
-											Die Veranstaltung findet in Thüringen, im kleinen Örtchen "Seitenroda" statt.
+											Die Veranstaltung findet in Thüringen, im kleinen Örtchen "Hohenstein" im Ortsteil "Schiedungen" statt.
 										</p>
 
 										<p>
@@ -23,7 +23,7 @@
 										</p>
 
 										<blockquote>
-											In alten Mauern aus Stein, Holz und Lehm - unter uralten Bäumen Übernachten und Träumen - in Zimmern, Kammern und Betten, so, wie's die Gäste gern hätten - oder im Heu, für die, ohne Scheu. Es gäbe noch manches mehr zu sagen von Seminaren, Freizeiten und Räumen zum Tagen
+											Auf unserem liebevoll renovierten und individuell eingerichteten Vierseitenhof im Südharz haben Sie die Möglichkeit ein Familienfest, ein Geburtstag oder eine Gruppenfahrt mit bis zu 30 Personen zu veranstalten. Der restaurierte und umgebaute Pferdestall mit Heizung, Geschirr und Buffetablage liefert das passende Ambiente für diese Art von Festlichkeiten.
 										</blockquote>
 									</div>
 								</div>
@@ -36,9 +36,9 @@
 										<div class="divider"></div>
 
 										<p>
-											Haus Bethlehem<br />
-											Dorfstraße 41<br />
-											07768 Seitenroda<br />
+											Ferienhof Baumann<br />
+											Platz 8<br />
+											99755 Hohenstein<br />
 										</p>
 									</div>
 								</div>
@@ -51,7 +51,7 @@
 										<div class="divider"></div>
 
 										<p>
-											Wer mit dem PKW anreist, hat ausreichend kostenlose Parkplätze zur Verfügung. Diese Parkplätze befinden sich circa 300m vom Veranstaltungsort entfernt.
+											??? Parkplätze ???
 										</p>
 									</div>
 
@@ -62,14 +62,14 @@
 										<div class="divider"></div>
 
 										<p>
-											Der nächste Bahnhof heißt Kahla (Thür).
+											Der nächste Bahnhof heißt ???.
 										</p>
 									</div>
 								</div>
 
 								<div class="row">
 									<div class="col s12">
-										<iframe class="google-maps" src="https://www.google.com/maps/embed/v1/place?q=Haus%20Bethlehem%20Dorfstra%C3%9Fe%2041%2007768%20Seitenroda&key=<?php echo $googleMapsApiKey; ?>" allowfullscreen></iframe>
+										<iframe class="google-maps" src="https://www.google.com/maps/embed/v1/place?q=Platz%208%2099755%20Hohenstein&key=<?php echo $googleMapsApiKey; ?>" allowfullscreen></iframe>
 									</div>
 								</div>
 							</div>

@@ -26,7 +26,7 @@ class Migration extends AbstractMigration {
      */
     public function change() {
 		$this->table('auth_token', ['id' => false, 'primary_key' => ['auth_token_id']])
-			->addColumn('auth_token_id', 'uuid',     [])
+			->addColumn('auth_token_id', 'string',   ['limit' => 255, 'null' => false])
 			->addColumn('user_id',       'integer',  ['null' => false])
 			->addColumn('token',         'string',   ['limit' => 255, 'null' => false])
 			->addColumn('browser',       'text',     ['null' => false])
@@ -72,10 +72,14 @@ class Migration extends AbstractMigration {
 				[
 					'name' => 'männlich',
 					'gender_code' => 'male',
+					'created_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+					'updated_at' => (new \DateTime())->format('Y-m-d H:i:s'),
 				],
 				[
 					'name' => 'weiblich',
-					'gender_code' => 'female'
+					'gender_code' => 'female',
+					'created_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+					'updated_at' => (new \DateTime())->format('Y-m-d H:i:s'),
 				]
 			])
 			->save();
@@ -113,14 +117,20 @@ class Migration extends AbstractMigration {
 				[
 					'type_code' => 'normal',
 					'name' => 'Normales Zimmer',
+					'created_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+					'updated_at' => (new \DateTime())->format('Y-m-d H:i:s'),
 				],
 				[
 					'type_code' => 'female',
-					'name' => 'Damenzimmer'
+					'name' => 'Damenzimmer',
+					'created_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+					'updated_at' => (new \DateTime())->format('Y-m-d H:i:s'),
 				],
 				[
 					'type_code' => 'couple',
-					'name' => 'Pärchenzimmer'
+					'name' => 'Pärchenzimmer',
+					'created_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+					'updated_at' => (new \DateTime())->format('Y-m-d H:i:s'),
 				]
 			])
 			->save();
@@ -137,11 +147,15 @@ class Migration extends AbstractMigration {
 			->insert([
 				[
 					'setting_code' => 'booking_active',
-					'value' => '0'
+					'value' => '0',
+					'created_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+					'updated_at' => (new \DateTime())->format('Y-m-d H:i:s'),
 				],
 				[
 					'setting_code' => 'waiting_list_active',
-					'value' => '0'
+					'value' => '0',
+					'created_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+					'updated_at' => (new \DateTime())->format('Y-m-d H:i:s'),
 				]
 			])
 			->save();
@@ -157,6 +171,19 @@ class Migration extends AbstractMigration {
 			->addColumn('deleted_at',  'datetime', ['default' => null, 'null' => true])
 			->save();
 
+		$this->table('user')
+			->insert([
+				[
+					'username'   => 'admin',
+					'password'   => '$2y$10$5005JYdIzvZOgOO4w7oED.n4LS.Wc9gJI1OoFjUZiZkvL1V/Db.ou',
+					'email'      => 'technik@bronyradiogermany.com',
+					'is_admin'   => true,
+					'created_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+					'updated_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+				],
+			])
+			->save();
+
 		$this->table('user_info', ['id' => false, 'primary_key' => ['user_info_id']])
 			->addColumn('user_info_id', 'integer',  ['identity' => true])
 			->addColumn('user_id',      'integer',  ['null' => false])
@@ -166,6 +193,20 @@ class Migration extends AbstractMigration {
 			->addColumn('gender_id',    'integer',  ['null' => false])
 			->addColumn('created_at',   'datetime', ['null' => false])
 			->addColumn('updated_at',   'datetime', ['null' => false])
+			->save();
+
+		$this->table('user_info')
+			->insert([
+				[
+					'user_id'    => 1,
+					'first_name' => 'Admin',
+					'last_name'  => 'Admin',
+					'birthday'   => (new \DateTime())->format('Y-m-d'),
+					'gender_id'  => 1,
+					'created_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+					'updated_at' => (new \DateTime())->format('Y-m-d H:i:s'),
+				],
+			])
 			->save();
 
 		$this->table('waiting_list', ['id' => false, 'primary_key' => ['waiting_list_id']])

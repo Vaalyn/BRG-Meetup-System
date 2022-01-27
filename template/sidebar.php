@@ -21,9 +21,9 @@
 
 					<div class="divider"></div>
 					<p class="textblock">
-						Dorfstraße 41<br />
-						07768 Seitenroda<br />
-						Thüringen
+						Ferienhof Baumann<br />
+						Platz 8<br />
+						99755 Hohenstein<br />
 					</p>
 
 					<p class="center">

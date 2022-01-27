@@ -54,7 +54,7 @@
 								<div class="row">
 									<div class="col s12">
 										<h5>Zahlungsmöglichkeiten</h5>
-										
+
 										<div class="card color-1">
 											<div class="card-content center">
 												<h3 class="card-title center"><i class="material-icons">warning</i>&nbsp;Achtung&nbsp;<i class="material-icons">warning</i></h3>
@@ -63,12 +63,7 @@
 										</div>
 
 										<p>
-											Die Bezahlung kann entweder per PayPal oder Banküberweisung erfolgen, nachfolgend findest du die Zahlungsinformationen.
-										</p>
-
-										<p>
-											PayPal:<br />
-											<?php echo htmlentities($payment['paypal']); ?>
+											Die Bezahlung erfolgt per Banküberweisung, nachfolgend findest du die Zahlungsinformationen.
 										</p>
 
 										<p>
@@ -89,7 +84,7 @@
 										</p>
 
 										<p>
-											Sollte es zu einer Stornierung kommen, so wird die Teilnahmegebühr, sofern bereits gezahlt, (abzgl. 0,10€ Überweisungsgebühr) zurückgebucht. Bei nicht erscheinen zum Meetup, kann keine Rückerstattung mehr erfolgen. Die Stornierung ist bis zwei Tage vor Meetupbeginn (05.05.) möglich. Danach ist eine Stornierung aus Organisatorischen Gründen nicht mehr möglich.
+											Sollte es zu einer Stornierung kommen, so wird die Teilnahmegebühr, sofern bereits gezahlt, (abzgl. 0,10€ Überweisungsgebühr) zurückgebucht. Bei nicht erscheinen zum Meetup, kann keine Rückerstattung mehr erfolgen. Die Stornierung ist bis zwei Tage vor Meetupbeginn (04.05.) möglich. Danach ist eine Stornierung aus Organisatorischen Gründen nicht mehr möglich.
 										</p>
 									</div>
 								</div>
