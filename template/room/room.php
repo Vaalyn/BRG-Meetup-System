@@ -14,8 +14,17 @@
 										<div class="divider"></div>
 
 										<div class="row">
-											<div class="col s12 m8 l6 offset-m2 offset-l3">
-												<img src="img/zimmerplan.png" alt="Zimmerplan" class="materialboxed z-depth-1" />
+											<div class="col s12 m6">
+												<img src="img/zimmerplan-erdgeschoss.jpeg" alt="Zimmerplan Erdgeschoss" class="materialboxed z-depth-1" />
+											</div>
+											<div class="col s12 m6">
+												<img src="img/zimmerplan-1-obergeschoss.jpeg" alt="Zimmerplan 1. Oberschoss" class="materialboxed z-depth-1" />
+											</div>
+											<div class="col s12 m6">
+												<img src="img/zimmerplan-dachgeschoss.jpeg" alt="Zimmerplan Dachgeschoss" class="materialboxed z-depth-1" />
+											</div>
+											<div class="col s12 m6">
+												<img src="img/zimmerplan-ferienwohnung.jpeg" alt="Zimmerplan Ferienwohnung" class="materialboxed z-depth-1" />
 											</div>
 										</div>
 
