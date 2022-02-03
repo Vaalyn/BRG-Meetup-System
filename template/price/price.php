@@ -58,7 +58,7 @@
 										<div class="card color-1">
 											<div class="card-content center">
 												<h3 class="card-title center"><i class="material-icons">warning</i>&nbsp;Achtung&nbsp;<i class="material-icons">warning</i></h3>
-												Überweise bitte erst, wenn du dich über unser System angemeldet hast. Wir akzeptieren keine "Anmeldung per Zahlung". Das verursacht für uns unnötig viel Aufwand, also mach das nicht.
+												Überweise bitte erst, wenn du dich über unser System angemeldet hast.<br/>Wir akzeptieren keine "Anmeldung per Zahlung". Das verursacht für uns unnötig viel Aufwand, also mach das nicht.
 											</div>
 										</div>
 
