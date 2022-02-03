@@ -270,7 +270,7 @@
 					</div>
 				</div>
 
-				<div class="row hide">
+				<div class="row">
 					<div class="col s12 center">
 						<input name="couple" id="couple" class="filled-in" type="checkbox" />
 						<label for="couple">Doppelzimmer für dich und deinen Partner/Partnerin buchen?</label>
