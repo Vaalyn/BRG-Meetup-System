@@ -46,12 +46,17 @@ class BookingController {
 		$roomId      = (int) $request->getParsedBody()['room_id'] ?? 0;
 		$nightHike   = isset($request->getParsedBody()['night_hike']);
 		$bedding     = isset($request->getParsedBody()['bedding']);
+		$corona      = isset($request->getParsedBody()['corona']);
 
 		try {
 			$bookingIsActive = (bool) Setting::where('setting_code', '=', 'booking_active')->first()->value;
 
 			if (!$bookingIsActive) {
 				throw new InfoException('Die Anmeldung ist momentan geschlossen');
+			}
+
+			if (!$corona) {
+				throw new InfoException('Du musst die Regeln bzgl. Corona akzeptieren!');
 			}
 
 			$bookingModelManager = new BookingModelManager(

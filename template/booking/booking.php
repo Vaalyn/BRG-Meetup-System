@@ -152,7 +152,7 @@
 								</div>
 
 								<div class="row">
-									<div class="col s12 center">
+									<div class="col s12">
 										<input name="bedding" id="bedding" class="filled-in" type="checkbox" />
 										<label for="bedding">Mir ist bewusst, dass ich Bettwäsche und Bettlaken (oder Schlafsack und Bettlaken) selbst mit zu bringen habe. Wenn ich diese nicht selbst mitbringe sind von mir 7 Euro Leihgebühren für Leibettwäsche zu entrichten.</label>
 									</div>
@@ -160,20 +160,27 @@
 
 								<?php if ($availableNightHikePlaces > 0) : ?>
 									<div class="row">
-										<div class="col s12 center">
+										<div class="col s12">
 											<input name="night_hike" id="night-hike" class="filled-in" type="checkbox" />
 											<label for="night-hike">Ich möchte an der Nachtwanderung teilnehmen.</label>
 										</div>
 									</div>
 
 									<div class="row">
-										<div class="col s12 center">
+										<div class="col s12">
 											<p class="center">
 												<a href="nachtwanderung" class="waves-effect waves-teal btn-flat" target="_blank">Informationen zur Nachtwanderung</a>
 											</p>
 										</div>
 									</div>
 								<?php endif; ?>
+
+								<div class="row">
+									<div class="col s12">
+										<input name="corona" id="corona" class="filled-in" type="checkbox" />
+										<label for="corona">Das Meeting läuft unter den Regeln 2G+ und allen weiteren Corona-Beschränkungen des Landes Thüringen. Die entsprechenden Nachweise sind mitzuführen und auf Verlangen vorzuweisen. Ich erkläre mich mit diesen Bedingungen einverstanden.</label>
+									</div>
+								</div>
 
 								<div class="row">
 									<div class="col s12 center">
