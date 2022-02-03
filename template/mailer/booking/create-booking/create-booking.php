@@ -39,7 +39,7 @@
 	</p>
 
 	<p>
-		Die Bezahlung kann entweder per Banküberweisung erfolgen, nachfolgend findest du die Zahlungsinformationen.
+		Die Bezahlung muss per Banküberweisung erfolgen, nachfolgend findest du die Zahlungsinformationen.
 	</p>
 
 	<p>
