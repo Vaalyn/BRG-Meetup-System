@@ -16,16 +16,20 @@
 								</div>
 							</div>
 
-							<div class="col s12">
-								<?php include_once(__DIR__ . '/first-day.php'); ?>
+							<div class="col s12 center">
+								Wird in den kommenden Wochen nach und nach zusammengestellt.
 							</div>
 
 							<div class="col s12">
-								<?php include_once(__DIR__ . '/second-day.php'); ?>
+								<?php //include_once(__DIR__ . '/first-day.php'); ?>
 							</div>
 
 							<div class="col s12">
-								<?php include_once(__DIR__ . '/third-day.php'); ?>
+								<?php //include_once(__DIR__ . '/second-day.php'); ?>
+							</div>
+
+							<div class="col s12">
+								<?php //include_once(__DIR__ . '/third-day.php'); ?>
 							</div>
 						</div>
 					</div>
