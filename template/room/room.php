@@ -15,13 +15,13 @@
 
 										<div class="row">
 											<div class="col s12 m6 l4">
-												<img src="img/zimmerplan-erdgeschoss.jpeg" alt="Zimmerplan Erdgeschoss" class="materialboxed z-depth-1" />
+												<img src="img/zimmerplan-erdgeschoss.png" alt="Zimmerplan Erdgeschoss" class="materialboxed z-depth-1" />
 											</div>
 											<div class="col s12 m6 l4">
-												<img src="img/zimmerplan-1-obergeschoss.jpeg" alt="Zimmerplan 1. Oberschoss" class="materialboxed z-depth-1" />
+												<img src="img/zimmerplan-obergeschoss.png" alt="Zimmerplan Oberschoss" class="materialboxed z-depth-1" />
 											</div>
 											<div class="col s12 m6 l4">
-												<img src="img/zimmerplan-dachgeschoss.jpeg" alt="Zimmerplan Dachgeschoss" class="materialboxed z-depth-1" />
+												<img src="img/zimmerplan-dachgeschoss.png" alt="Zimmerplan Dachgeschoss" class="materialboxed z-depth-1" />
 											</div>
 										</div>
 
