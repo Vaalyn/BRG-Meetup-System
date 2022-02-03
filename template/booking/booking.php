@@ -31,14 +31,14 @@
 							<div class="divider"></div>
 
 							<form>
-								<div class="row hide">
+								<div class="row">
 									<div class="col s12 center">
 										<input name="couple" id="couple" class="filled-in" type="checkbox" />
 										<label for="couple">Doppelzimmer für dich und deinen Partner/Partnerin buchen?</label>
 									</div>
 								</div>
 
-								<div id="is-couple" class="hide">
+								<div id="is-couple">
 									<div class="row">
 										<div class="col s12">
 											Sollte dein Partner sich bereits angemeldet haben, gib einfach den Pärchencode, den er oder sie mit der Anmeldung für ein Doppelzimmer erhalten hat, ein und deine Anmeldung wird auf das selbe Doppelzimmer gebucht.
