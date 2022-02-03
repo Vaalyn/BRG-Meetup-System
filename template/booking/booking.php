@@ -38,7 +38,7 @@
 									</div>
 								</div>
 
-								<div id="is-couple">
+								<div id="is-couple" class="hide">
 									<div class="row">
 										<div class="col s12">
 											Sollte dein Partner sich bereits angemeldet haben, gib einfach den Pärchencode, den er oder sie mit der Anmeldung für ein Doppelzimmer erhalten hat, ein und deine Anmeldung wird auf das selbe Doppelzimmer gebucht.
