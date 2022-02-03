@@ -29,6 +29,16 @@
 						<div class="card-content grey-text text-lighten-2">
 							<h3 class="card-title center">Zimmer buchen</h3>
 							<div class="divider"></div>
+							<p>Pärchenbetten sind größere Betten mit einfacher Matratze.
+								Diese sollten vorzugsweise von zwei Personen, können aber auch als Einzelbett genutzt werden.
+
+								Normale Doppelbetten haben zwei getrennte Matratzen.
+
+								Manche Betten sind als Luftmatratze ausgewiesen. Wir haben zwar welche, aber ihr könnt auch gerne eure eigene mitbringen.
+
+								Sollten alle Betten belegt sein haben wir noch die Möglichkeit einige Luftmatratzen im Dachgeschoss aufzustellen. Sprecht uns bei Fragen einfach an.
+							</p>
+							<div class="divider"></div>
 
 							<form>
 								<div class="row">
