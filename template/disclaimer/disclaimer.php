@@ -7,7 +7,7 @@
 						<div class="card-content grey-text text-lighten-2">
 							<h3 class="card-title center">Einverständnis- und Verzichtserklärung, Veranstaltungsregeln sowie Haftungsfreistellung</h3>
 							<div class="divider"></div>
-							<h6 class="center">Für die Veranstaltung des Brony Radio Germany e.V. "BRG Meetup" vom 06.05. - 08.05.222 in Seitenroda.</h6>
+							<h6 class="center">Für die Veranstaltung des Brony Radio Germany e.V. "BRG Meetup" vom 06.05. - 08.05.2022 in Hohenstein.</h6>
 
 							<div class="row">
 								<div class="col s12">
