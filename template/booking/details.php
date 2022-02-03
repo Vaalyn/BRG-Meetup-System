@@ -132,11 +132,6 @@
 										<table class="striped">
 											<tbody>
 												<tr>
-													<th>PayPal</th>
-													<td><?php echo htmlentities($payment['paypal']); ?></td>
-												</tr>
-
-												<tr>
 													<th>Bank<wbr/>überweisung</th>
 													<td><?php echo htmlentities($payment['bankTransfer']['recipient']); ?></td>
 												</tr>

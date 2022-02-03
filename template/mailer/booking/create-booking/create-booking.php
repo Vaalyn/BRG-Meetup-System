@@ -39,12 +39,7 @@
 	</p>
 
 	<p>
-		Die Bezahlung kann entweder per PayPal oder Banküberweisung erfolgen, nachfolgend findest du die Zahlungsinformationen.
-	</p>
-
-	<p>
-		<b>PayPal:</b><br />
-		<?php echo htmlentities($payment['paypal']); ?>
+		Die Bezahlung kann entweder per Banküberweisung erfolgen, nachfolgend findest du die Zahlungsinformationen.
 	</p>
 
 	<p>
