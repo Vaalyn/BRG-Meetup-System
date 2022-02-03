@@ -12,12 +12,9 @@
 									<div class="card-content grey-text text-lighten-2">
 										<h3 class="card-title center">Programm</h3>
 										<div class="divider"></div>
+										Wird in den kommenden Wochen nach und nach zusammengestellt.
 									</div>
 								</div>
-							</div>
-
-							<div class="col s12 center">
-								Wird in den kommenden Wochen nach und nach zusammengestellt.
 							</div>
 
 							<div class="col s12">
