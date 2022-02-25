@@ -63,7 +63,7 @@
 								<td class="center">15:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center yellow darken-3">Dance Battle</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
