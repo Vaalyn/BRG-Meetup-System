@@ -12,14 +12,14 @@
 								<th class="center">Zeiten</th>
 								<th class="center">Hauptraum</th>
 								<th class="center">Gelände</th>
-								<th class="center">Nebenraum</th>
+								<th class="center">Fun Fun Raum</th>
 								<th class="center">Außerhalb</th>
 							</tr>
 						</thead>
 
 						<tbody>
 							<tr>
-								<td class="center">Ab 13:00</td>
+								<td class="center">Ab 12:00</td>
 								<td class="center light-blue darken-1" colspan="4">Anreise</td>
 							</tr>
 
@@ -31,21 +31,20 @@
 							</tr>
 
 							<tr>
-								<td class="center">18:30</td>
+								<td class="center">19:00</td>
 								<td class="center blue darken-1" rowspan="2">Abendessen</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center orange darken-2" rowspan="3">Karaoke & Trotmania</td>
+								<td class="center purple" rowspan="4">Nachtwanderung</td>
 							</tr>
 
 							<tr>
-								<td class="center">19:00</td>
+								<td class="center">20:00</td>
 								<td class="center">-</td>
-								<td class="center purple" rowspan="3">Nachtwanderung</td>
 							</tr>
 
 							<tr>
 								<td class="center">21:00</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
 

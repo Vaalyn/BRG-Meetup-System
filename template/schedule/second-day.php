@@ -12,7 +12,7 @@
 								<th class="center">Zeiten</th>
 								<th class="center">Hauptraum</th>
 								<th class="center">Gelände</th>
-								<th class="center">Nebenraum</th>
+								<th class="center">Fun Fun Raum</th>
 								<th class="center">Außerhalb</th>
 							</tr>
 						</thead>
@@ -29,7 +29,7 @@
 							<tr>
 								<td class="center">10:00</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center orange darken-2" rowspan="11">Karaoke & Trotmania</td>
 								<td class="center">-</td>
 							</tr>
 
@@ -37,7 +37,6 @@
 								<td class="center">11:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center orange darken-2">Poker-Turnier</td>
 							</tr>
 
 							<tr>
@@ -49,6 +48,7 @@
 
 							<tr>
 								<td class="center">13:00</td>
+								<td class="center purple" rowspan="2">Jasters Bäckchen</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
@@ -67,7 +67,7 @@
 							</tr>
 
 							<tr>
-								<td class="center">16:30</td>
+								<td class="center">16:00</td>
 								<td class="center purple" rowspan="2">Jasters Verlosungs<wbr>show</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -97,14 +97,14 @@
 
 							<tr>
 								<td class="center">21:00</td>
-								<td class="center">-</td>
+								<td class="center yellow darken-3" rowspan="2">Cabra und Jaster Party = GEIL!</td>
+								<td class="center red" rowspan="4">Lagerfeuer</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">22:00</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 							</tr>
@@ -120,11 +120,12 @@
 								<td class="center">00:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">Im Anschluss</td>
-								<td class="red center" colspan="4">Nachtruhe</td>
+								<td class="center red" colspan="4">Nachtruhe</td>
 							</tr>
 						</tbody>
 					</table>
