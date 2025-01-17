@@ -14,6 +14,12 @@
 
 								<div class="row">
 									<div class="col s12">
+										<p>Der Preis wird aktuell noch von uns kalkuliert und wird voraussichtlich je nach Art des gebuchten Zimmers leicht variieren. Weiteres kann zu gegebener Zeit der Zimmerliste entnommen werden.</p>
+									</div>
+								</div>
+
+								<div class="row hide">
+									<div class="col s12">
 										<p>
 											<?php
 												echo sprintf(
@@ -84,7 +90,7 @@
 										</p>
 
 										<p>
-											Sollte es zu einer Stornierung kommen, so wird die Teilnahmegebühr, sofern bereits gezahlt, (abzgl. 0,10€ Überweisungsgebühr) zurückgebucht. Bei nicht erscheinen zum Meetup, kann keine Rückerstattung mehr erfolgen. Die Stornierung ist bis zwei Tage vor Meetupbeginn (04.05.) möglich. Danach ist eine Stornierung aus Organisatorischen Gründen nicht mehr möglich.
+											Sollte es zu einer Stornierung kommen, so wird die Teilnahmegebühr, sofern bereits gezahlt, (abzgl. 0,10€ Überweisungsgebühr) zurückgebucht. Bei nicht erscheinen zum Meetup, kann keine Rückerstattung mehr erfolgen. Die Stornierung ist bis zwei Tage vor Meetupbeginn (18.06.) möglich. Danach ist eine Stornierung aus Organisatorischen Gründen nicht mehr möglich.
 										</p>
 									</div>
 								</div>

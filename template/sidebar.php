@@ -21,9 +21,9 @@
 
 					<div class="divider"></div>
 					<p class="textblock">
-						Ferienhof Baumann<br />
-						Platz 8<br />
-						99755 Hohenstein<br />
+						Kulturherberge e.V. <br />
+						Wernershöhe 2<br />
+						31079 Sibbesse<br />
 					</p>
 
 					<p class="center">
@@ -40,10 +40,6 @@
 				<div class="card-content grey-text text-lighten-2 center">
 					<h3 class="card-title center">Teilnahmegebühr</h3>
 					<div class="divider"></div>
-
-					<p>
-						<?php echo sprintf('Die Teilnahme am BRG Meetup kostet %s€', $meetupCost); ?>
-					</p>
 
 					<p class="center">
 						<a href="preis" class="btn waves-effect waves-light color-1">Weitere Infos</a>

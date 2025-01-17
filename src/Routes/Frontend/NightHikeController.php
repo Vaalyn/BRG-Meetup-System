@@ -34,7 +34,6 @@ class NightHikeController {
 			'auth' => $this->container->auth,
 			'flashMessages' => $this->container->flash->getMessages(),
 			'pageTitle' => 'Nachtwanderung',
-			'meetupCost' => $this->container->config['meetupCost'],
 			'meetupDate' => $this->container->config['meetupDate']
 		]);
 	}

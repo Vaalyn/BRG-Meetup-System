@@ -34,7 +34,6 @@ class HomeController {
 			'auth' => $this->container->auth,
 			'flashMessages' => $this->container->flash->getMessages(),
 			'countdownClockDate' => $this->container->config['meetupDate'],
-			'meetupCost' => $this->container->config['meetupCost'],
 			'meetupDate' => $this->container->config['meetupDate']
 		]);
 	}

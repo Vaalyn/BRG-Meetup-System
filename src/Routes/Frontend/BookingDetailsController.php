@@ -91,7 +91,6 @@ class BookingDetailsController {
 			'roomsSingle' => $roomsSingle,
 			'availableNightHikePlaces' => $availableNightHikePlaces,
 			'payment' => $this->container->config['payment'],
-			'meetupCost' => $this->container->config['meetupCost'],
 			'meetupDate' => $this->container->config['meetupDate']
 		]);
 	}

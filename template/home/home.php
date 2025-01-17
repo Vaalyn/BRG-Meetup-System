@@ -41,7 +41,7 @@
 								Auf dieser Website findest du Informationen rund um das Brony Radio Germany Meetup und kannst dich dafür anmelden.
 							</p>
 							<p>
-								Das Brony Radio Germany Meetup ist ein alljährliches Treffen, organisiert vom Team des BRG, auf dem sich Bronies von nah und fern treffen und kennenlernen oder wiedersehen.
+								Das Brony Radio Germany Meetup ist ein Treffen, organisiert vom Team des BRG, auf dem sich Bronies von nah und fern treffen und kennenlernen oder wiedersehen.
 							</p>
 						</div>
 					</div>

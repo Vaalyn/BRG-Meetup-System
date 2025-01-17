@@ -256,7 +256,7 @@ class BookingController {
 				'isCoupleBooking' => $booking->couple,
 				'coupleCode' => $booking->couple_code,
 				'bookingDetailsUrl' => $bookingDetailsUrl,
-				'meetupCost' => $this->container->config['meetupCost'],
+				'meetupCost' => $booking->room->price,
 				'user' => $user,
 				'meetupYear' => $meetupYear,
 				'payment' => $this->container->config['payment']

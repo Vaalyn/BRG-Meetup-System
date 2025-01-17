@@ -96,6 +96,7 @@ $(document).ready(function() {
 					$('#add-room-modal form #name').val(data.result.name);
 					$('#add-room-modal form #room-type').val(data.result.room_type_id);
 					$('#add-room-modal form #bed-count').val(data.result.bed_count);
+					$('#add-room-modal form #price').val(data.result.price);
 
 					Materialize.updateTextFields();
 					$('#add-room-modal select').material_select();

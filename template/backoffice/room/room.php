@@ -15,6 +15,7 @@
 											<th>Name</th>
 											<th>Zimmerart</th>
 											<th>Betten</th>
+											<th>Preis</th>
 											<th>Belegt</th>
 											<th>Erstellt</th>
 											<th>Aktualisiert</th>
@@ -28,6 +29,7 @@
 												<td><?php echo htmlentities($room->name); ?></td>
 												<td><?php echo htmlentities($room->roomType->name); ?></td>
 												<td><?php echo $room->bed_count; ?></td>
+												<td><?php echo $room->price; ?>&nbsp;€</td>
 												<td><?php echo $room->bookings->count(); ?></td>
 												<td>
 													<?php echo $room->created_at->format('H:i:s'); ?>
@@ -110,6 +112,11 @@
 							<div class="input-field col s12 m6">
 								<input name="bed_count" id="bed-count" type="number" />
 								<label for="bed-count">Betten</label>
+							</div>
+
+							<div class="input-field col s12 m6">
+								<input name="price" id="price" type="number" />
+								<label for="price">Preis</label>
 							</div>
 						</div>
 					</form>

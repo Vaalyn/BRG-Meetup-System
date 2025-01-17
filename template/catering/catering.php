@@ -19,7 +19,7 @@
 										</p>
 
 										<p>
-											Am Samstag und Sonntag wird ein Frühstücksbuffet bereitgestellt und am Samstagabend wird gegrillt.<br />
+											Am Samstag und Sonntag wird ein Frühstücksbuffet bereitgestellt und am Samstagabend wird von uns gekocht werden, genaueres wird auch hier noch veröffentlicht.<br />
 											Es wird euch zudem in Form von Snacks, Obst etc. zwischen den Mahlzeiten etwas zu Essen bereitgestellt.
 										</p>
 									</div>

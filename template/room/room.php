@@ -13,26 +13,14 @@
 										<h3 class="card-title center">Zimmer</h3>
 										<div class="divider"></div>
 										<div class="row">
-											<div class="col s12">Pärchenbetten sind größere Betten mit einfacher Matratze.</div>
-											<div class="col s12">Diese sollten vorzugsweise von zwei Personen, können aber auch als Einzelbett genutzt werden.</div>
+											<div class="col s12"></div>
 										</div>
 
-										<div class="row">
-											<div class="col s12">Einige Doppelbetten haben zwei getrennte Matratzen. Hier schläft man mit mehr Abstand.</div>
-										</div>
-
-										<div class="row">
-											<div class="col s12">Manche Betten sind als Luftmatratze ausgewiesen. Wir haben zwar welche, aber ihr könnt auch gerne eure eigene mitbringen.</div>
-										</div>
-
-										<div class="row">
-											<div class="col s12">Sollten alle Betten belegt sein haben wir noch die Möglichkeit einige Luftmatratzen im Dachgeschoss aufzustellen. Sprecht uns bei Fragen einfach an.</div>
-										</div>
-										<div class="row">
+										<div class="row hide">
 											<div class="divider"></div>
 										</div>
 
-										<div class="row">
+										<div class="row hide">
 											<div class="col s12 m6 l4">
 												<img src="img/zimmerplan-erdgeschoss.png" alt="Zimmerplan Erdgeschoss" class="materialboxed z-depth-1" />
 											</div>
@@ -51,7 +39,7 @@
 														<?php foreach ($rooms as $room) : ?>
 															<li>
 																<div class="collapsible-header color-4">
-																	<div class="left"><?php echo htmlentities($room->name); ?></div>
+																	<div class="left"><?php echo htmlentities($room->name); ?> (<?php echo $room->price ?>&nbsp;€)</div>
 
 																	<?php
 																		echo sprintf(

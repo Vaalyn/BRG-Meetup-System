@@ -20,6 +20,10 @@
 											<td><?php echo $room->bed_count; ?></td>
 										</tr>
 										<tr>
+											<th>Preis</th>
+											<td><?php echo $room->price; ?>&nbsp;€</td>
+										</tr>
+										<tr>
 											<th>Buchungen</th>
 											<td><?php echo $room->bookings->count(); ?></td>
 										</tr>

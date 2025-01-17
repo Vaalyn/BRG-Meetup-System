@@ -34,7 +34,6 @@ class LocationController {
 			'auth' => $this->container->auth,
 			'flashMessages' => $this->container->flash->getMessages(),
 			'pageTitle' => 'Veranstaltungsort',
-			'meetupCost' => $this->container->config['meetupCost'],
 			'meetupDate' => $this->container->config['meetupDate'],
 			'googleMapsApiKey' => $this->container->config['maps']['key']
 		]);

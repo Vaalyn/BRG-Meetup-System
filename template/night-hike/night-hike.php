@@ -14,6 +14,10 @@
 
 								<div class="row">
 									<div class="col s12">
+										<p>Wir klären derzeit noch ob wir die Nachtwanderung dieses mal auch anbieten können.</p>
+									</div>
+
+									<div class="col s12 hide">
 										<p>
 											Die Nachtwanderung findet am Freitag Abend statt. Die Teilnehmer werden in drei Gruppen aufgeteilt, welche jeweils von einem Teammitglied auf der Strecke begleitet wird.
 										</p>

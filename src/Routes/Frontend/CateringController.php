@@ -34,7 +34,6 @@ class CateringController {
 			'auth' => $this->container->auth,
 			'flashMessages' => $this->container->flash->getMessages(),
 			'pageTitle' => 'Verpflegung',
-			'meetupCost' => $this->container->config['meetupCost'],
 			'meetupDate' => $this->container->config['meetupDate']
 		]);
 	}

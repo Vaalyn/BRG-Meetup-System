@@ -36,7 +36,6 @@ class RoomController {
 			'flashMessages' => $this->container->flash->getMessages(),
 			'pageTitle' => 'Zimmer',
 			'rooms' => Room::get(),
-			'meetupCost' => $this->container->config['meetupCost'],
 			'meetupDate' => $this->container->config['meetupDate']
 		]);
 	}

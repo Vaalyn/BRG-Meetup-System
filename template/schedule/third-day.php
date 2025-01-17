@@ -1,12 +1,12 @@
 <div class="card color-3">
 	<div class="card-content grey-text text-lighten-2">
-		<h3 class="card-title center">Dritter Tag (08.05.2022)</h3>
+		<h3 class="card-title center">Dritter Tag (22.06.2025)</h3>
 		<div class="divider"></div>
 
 		<div class="row">
 			<div class="col s12">
 				<div class="overflow-side-scroll">
-					<table class="bordered">
+					<table class="bordered hide">
 						<thead>
 							<tr>
 								<th class="center">Zeiten</th>

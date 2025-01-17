@@ -154,7 +154,7 @@
 							<div class="row">
 								<div class="col s12">
 									<p class="center">Teilnahmegebühr</p>
-									<p class="center"><?php echo $meetupCost; ?>&nbsp;€</p>
+									<p class="center"><?php echo $user->booking->room->price; ?>&nbsp;€</p>
 
 									<p>
 										Gib als Betreff bei der Überweisung folgendes ein damit wir die Bezahlung deiner Anmeldung zuordnen können:

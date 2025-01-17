@@ -70,11 +70,10 @@ return [
 			'security' => 'tls',
 			'authMode' => 'login'
 		],
-		'meetupCost' => 42,
-		'meetupDate' => '2018-08-31',
+		'meetupDate' => '2025-06-20',
 		'allowUnisexRooms' => false,
 		'nightHike' => [
-			'places' => 18
+			'places' => 0
 		],
 		'payment' => [
 			'paypal' => '',

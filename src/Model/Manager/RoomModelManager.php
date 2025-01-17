@@ -11,16 +11,23 @@ class RoomModelManager {
 	 * @param int $roomTypeId
 	 * @param string $name
 	 * @param int $bedCount
+	 * @param int $price
 	 *
 	 * @return \BronyRadioGermany\Meetup\Model\Room
 	 */
-	public function createRoom(int $roomTypeId, string $name, int $bedCount): Room {
-		$this->validateRoomArguments($roomTypeId, $name, $bedCount);
+	public function createRoom(
+		int $roomTypeId,
+		string $name,
+		int $bedCount,
+		int $price
+	): Room {
+		$this->validateRoomArguments($roomTypeId, $name, $bedCount, $price);
 
 		$room               = new Room();
 		$room->room_type_id = $roomTypeId;
 		$room->name         = $name;
 		$room->bed_count    = $bedCount;
+		$room->price        = $price;
 		$room->save();
 
 		if ($room->room_id === null) {
@@ -35,11 +42,18 @@ class RoomModelManager {
 	 * @param int $roomTypeId
 	 * @param string $name
 	 * @param int $bedCount
+	 * @param int $price
 	 *
 	 * @return \BronyRadioGermany\Meetup\Model\Room
 	 */
-	public function updateRoom(int $id, int $roomTypeId, string $name, int $bedCount): Room {
-		$this->validateRoomArguments($roomTypeId, $name, $bedCount);
+	public function updateRoom(
+		int $id,
+		int $roomTypeId,
+		string $name,
+		int $bedCount,
+		int $price
+	): Room {
+		$this->validateRoomArguments($roomTypeId, $name, $bedCount, $price);
 
 		$room = Room::where('room_id', '=', $id)->first();
 
@@ -50,6 +64,7 @@ class RoomModelManager {
 		$room->room_type_id = $roomTypeId;
 		$room->name         = $name;
 		$room->bed_count    = $bedCount;
+		$room->price        = $price;
 		$room->save();
 
 		return $room;
@@ -59,10 +74,11 @@ class RoomModelManager {
 	 * @param int $roomTypeId
 	 * @param string $name
 	 * @param int $bedCount
+	 * @param int $price
 	 *
 	 * @return void
 	 */
-	public function validateRoomArguments(int $roomTypeId, string $name, int $bedCount): void {
+	public function validateRoomArguments(int $roomTypeId, string $name, int $bedCount, int $price): void {
 		if (!RoomType::where('room_type_id', '=', $roomTypeId)->exists()) {
 			throw new InfoException('Unbekannte Zimmerart');
 		}
@@ -73,6 +89,10 @@ class RoomModelManager {
 
 		if ($bedCount <= 0) {
 			throw new InfoException('Es muss eine Bettenanzahl größer 0 eingegeben werden');
+		}
+
+		if ($price <= 0) {
+			throw new InfoException('Es muss ein Preis größer 0 eingegeben werden');
 		}
 	}
 }

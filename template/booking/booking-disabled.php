@@ -6,7 +6,7 @@
 					<div class="card color-3">
 						<div class="card-content grey-text text-lighten-2">
 							<p class="center">
-								Die Anmeldung startet im Februar.<br />
+								Die Anmeldung startet wird zu einem späteren Zeitpunkt geöffnet.<br />
 								Dann könnt ihr euch auf dieser Seite für das BRG Meetup anmelden.
 							</p>
 						</div>
