@@ -29,24 +29,27 @@
 						<div class="card-content grey-text text-lighten-2">
 							<h3 class="card-title center">Zimmer buchen</h3>
 							<div class="divider"></div>
-							<div class="row">
-								<div class="col s12">Pärchenbetten sind größere Betten mit einfacher Matratze.</div>
-								<div class="col s12">Diese sollten vorzugsweise von zwei Personen, können aber auch als Einzelbett genutzt werden.</div>
-							</div>
 
-							<div class="row">
-								<div class="col s12">Einige Doppelbetten haben zwei getrennte Matratzen. Hier schläft man mit mehr Abstand.</div>
-							</div>
+							<div class="hide">
+								<div class="row">
+									<div class="col s12">Pärchenbetten sind größere Betten mit einfacher Matratze.</div>
+									<div class="col s12">Diese sollten vorzugsweise von zwei Personen, können aber auch als Einzelbett genutzt werden.</div>
+								</div>
 
-							<div class="row">
-								<div class="col s12">Manche Betten sind als Luftmatratze ausgewiesen. Wir haben zwar welche, aber ihr könnt auch gerne eure eigene mitbringen.</div>
-							</div>
+								<div class="row">
+									<div class="col s12">Einige Doppelbetten haben zwei getrennte Matratzen. Hier schläft man mit mehr Abstand.</div>
+								</div>
 
-							<div class="row">
-								<div class="col s12">Sollten alle Betten belegt sein haben wir noch die Möglichkeit einige Luftmatratzen im Dachgeschoss aufzustellen. Sprecht uns bei Fragen einfach an.</div>
-							</div>
-							<div class="row">
-								<div class="divider"></div>
+								<div class="row">
+									<div class="col s12">Manche Betten sind als Luftmatratze ausgewiesen. Wir haben zwar welche, aber ihr könnt auch gerne eure eigene mitbringen.</div>
+								</div>
+
+								<div class="row">
+									<div class="col s12">Sollten alle Betten belegt sein haben wir noch die Möglichkeit einige Luftmatratzen im Dachgeschoss aufzustellen. Sprecht uns bei Fragen einfach an.</div>
+								</div>
+								<div class="row">
+									<div class="divider"></div>
+								</div>
 							</div>
 
 							<form>
