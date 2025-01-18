@@ -46,17 +46,12 @@ class BookingController {
 		$roomId      = (int) $request->getParsedBody()['room_id'] ?? 0;
 		$nightHike   = isset($request->getParsedBody()['night_hike']);
 		$bedding     = isset($request->getParsedBody()['bedding']);
-		$corona      = isset($request->getParsedBody()['corona']);
 
 		try {
 			$bookingIsActive = (bool) Setting::where('setting_code', '=', 'booking_active')->first()->value;
 
 			if (!$bookingIsActive) {
 				throw new InfoException('Die Anmeldung ist momentan geschlossen');
-			}
-
-			if (!$corona) {
-				throw new InfoException('Du musst die Regeln bzgl. Corona akzeptieren!');
 			}
 
 			$bookingModelManager = new BookingModelManager(
@@ -141,6 +136,15 @@ class BookingController {
 			)));
 		}
 
+		$room = Room::where('room_id', '=', $roomId)->first();
+
+		if ($booking->room->price !== $room->price) {
+			return $response->write(json_encode(array(
+				'status' => 'error',
+				'errors' => 'Zimmer können nur zum selben Preis gewechselt werden, bitte kontaktiere uns'
+			)));
+		}
+
 		$bookingModelManager = new BookingModelManager(
 			$this->container->config['allowUnisexRooms'],
 			$this->container->config['nightHike']['places'],
@@ -148,8 +152,6 @@ class BookingController {
 			$this->container->mailer,
 			$this->container->renderer
 		);
-
-		$room = Room::where('room_id', '=', $roomId)->first();
 
 		try {
 			if ($couple && $coupleCode !== '') {

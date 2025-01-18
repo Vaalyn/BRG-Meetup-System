@@ -92,7 +92,6 @@ class UserInfoModelManager {
 		}
 
 		$this->validateUserInfo(
-			$user,
 			$firstName,
 			$lastName,
 			$birthday,
@@ -132,6 +131,8 @@ class UserInfoModelManager {
 		}
 
 		if (!Validator::date('Y-m-d')->validate($birthday)) {
+			var_dump($birthday);
+			die();
 			throw new InfoException('Ungültiges Format für Geburtsdatum');
 		}
 

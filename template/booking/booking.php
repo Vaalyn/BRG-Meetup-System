@@ -108,19 +108,21 @@
 												<?php if ($room->bookings->count() < $room->bed_count) : ?>
 													<option value="<?php echo $room->room_id; ?>"><?php
 														echo htmlentities(sprintf(
-															'%s (%s / %s belegt)',
+															'%s (%s / %s belegt) - %s €',
 															$room->name,
 															$room->bookings->count(),
-															$room->bed_count
+															$room->bed_count,
+															$room->price
 														));
 													?></option>
 												<?php else : ?>
 													<option value="<?php echo $room->room_id; ?>" disabled><?php
 														echo htmlentities(sprintf(
-															'%s (%s / %s belegt)',
+															'%s (%s / %s belegt) - %s €',
 															$room->name,
 															$room->bookings->count(),
-															$room->bed_count
+															$room->bed_count,
+															$room->price
 														));
 													?></option>
 												<?php endif; ?>
@@ -174,13 +176,6 @@
 										</div>
 									</div>
 								<?php endif; ?>
-
-								<div class="row">
-									<div class="col s12">
-										<input name="corona" id="corona" class="filled-in" type="checkbox" />
-										<label for="corona">Das Meeting läuft unter den Regeln 2G+ und allen weiteren Corona-Beschränkungen des Landes Thüringen. Die entsprechenden Nachweise sind mitzuführen und auf Verlangen vorzuweisen. Ich erkläre mich mit diesen Bedingungen einverstanden.</label>
-									</div>
-								</div>
 
 								<div class="row">
 									<div class="col s12 center">

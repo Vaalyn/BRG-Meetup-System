@@ -7,12 +7,12 @@
 						<div class="card-content grey-text text-lighten-2">
 							<h3 class="card-title center">Einverständnis- und Verzichtserklärung, Veranstaltungsregeln sowie Haftungsfreistellung</h3>
 							<div class="divider"></div>
-							<h6 class="center">Für die Veranstaltung des Brony Radio Germany e.V. "BRG Meetup" vom 06.05. - 08.05.2022 in Hohenstein.</h6>
+							<h6 class="center">Für die Veranstaltung des Brony Radio Germany e.V. "BRG Meetup" vom 20.06. - 22.06.2025 in Sibbesse.</h6>
 
 							<div class="row">
 								<div class="col s12">
 									<p>
-										Das Brony Radio Germany Meetup 2022 ist eine private Veranstaltung des "Brony Radio Germany e.V." (im folgenden BRG e.V. genannt) für angemeldete, geladene und bestätigte Besucher und Fans der Serie "My Little Pony – Friendship is Magic" und deren Gäste. Die Teilnahme an der Veranstaltung als Besucher geschieht auf eigene Gefahr.
+										Das Brony Radio Germany Meetup 2025 ist eine private Veranstaltung des "Brony Radio Germany e.V." (im folgenden BRG e.V. genannt) für angemeldete, geladene und bestätigte Besucher und Fans der Serie "My Little Pony – Friendship is Magic" und deren Gäste. Die Teilnahme an der Veranstaltung als Besucher geschieht auf eigene Gefahr.
 									</p>
 									<p>
 										Die ehrenamtlichen Veranstalter und deren unterstützende Helfer haften weder vertraglich noch auf sonstige Art für irgendwelche Schäden, die von Besuchern verursacht werden und/oder ihm oder Dritten im Zusammenhang mit dem Besuch entstehen, es sei denn der Veranstalter oder deren Helfer handeln vorsätzlich oder grob fahrlässig.
@@ -41,11 +41,11 @@
 										</li>
 
 										<li>
-											Bettwäsche ist selbst mitzubringen (Bettlaken, Bezüge für Kissen und Decke), mindestens jedoch ein Bettlaken und Schlafsack, oder gegen eine Gebühr (7 Euro) vor Ort zu leihen.
+											Bettwäsche (Bettlaken, Bezüge für Kissen und Decke) sowie Handtücher und Hausschuhe sind selbst mitzubringen. Alternativ können mindestens ein Bettlaken und ein Schlafsack genutzt werden. Gegen eine Gebühr kann vor Ort dreiteilige Bettwäsche für 3,50 € und Handtücher für 1,50 € ausgeliehen werden.
 										</li>
 
 										<li>
-											Alkoholverbot: Auf dem Gelände herrscht generelles Alkoholverbot. Erlaubt ist nur der Alkohol welcher vom Veranstalter ausgeschenkt oder genehmigt wird. Ein Verstoß gegen das Verbot kann mit einem Ausschluss von der Veranstaltung bedeuten.
+											Alkoholkonsum: Der Konsum von Alkohol auf dem Gelände ist nicht generell verboten, sollte jedoch in einem verantwortungsvollen Rahmen erfolgen. Der Veranstalter behält sich das Recht vor, bei unangemessenem Verhalten oder Missbrauch entsprechend einzuschreiten, was bis zum Ausschluss von der Veranstaltung führen kann.
 										</li>
 
 										<li>

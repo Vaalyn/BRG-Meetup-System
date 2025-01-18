@@ -73,6 +73,10 @@
 													</td>
 												</tr>
 												<tr>
+													<th>Preis</th>
+													<td><?php echo $user->booking->room->price; ?>&nbsp;€</td>
+												</tr>
+												<tr>
 													<th>Bezahlt</th>
 													<td>
 														<?php if ($user->booking->paid) : ?>
@@ -295,22 +299,24 @@
 						<div id="room-id-couple-wrapper" class="col s12 l6 offset-l3 input-field">
 							<select name="room_id_couple" id="room-id-couple">
 								<?php foreach ($roomsCouple as $room) : ?>
-									<?php if ($room->bookings->count() < $room->bed_count) : ?>
+									<?php if ($room->bookings->count() < $room->bed_count && $room->price === $user->booking->room->price) : ?>
 										<option value="<?php echo $room->room_id; ?>"><?php
 											echo htmlentities(sprintf(
-												'%s (%s / %s belegt)',
+												'%s (%s / %s belegt) - %s €',
 												$room->name,
 												$room->bookings->count(),
-												$room->bed_count
+												$room->bed_count,
+												$room->price
 											));
 										?></option>
 									<?php else : ?>
 										<option value="<?php echo $room->room_id; ?>" disabled><?php
 											echo htmlentities(sprintf(
-												'%s (%s / %s belegt)',
+												'%s (%s / %s belegt) - %s €',
 												$room->name,
 												$room->bookings->count(),
-												$room->bed_count
+												$room->bed_count,
+												$room->price
 											));
 										?></option>
 									<?php endif; ?>
@@ -325,28 +331,36 @@
 					<div class="col s12 l6 offset-l3 input-field">
 						<select name="room_id_single" id="room-id-single">
 							<?php foreach ($roomsSingle as $room) : ?>
-								<?php if ($room->bookings->count() < $room->bed_count) : ?>
+								<?php if ($room->bookings->count() < $room->bed_count && $room->price === $user->booking->room->price) : ?>
 									<option value="<?php echo $room->room_id; ?>"><?php
 										echo htmlentities(sprintf(
-											'%s (%s / %s belegt)',
+											'%s (%s / %s belegt) - %s €',
 											$room->name,
 											$room->bookings->count(),
-											$room->bed_count
+											$room->bed_count,
+											$room->price
 										));
 									?></option>
 								<?php else : ?>
 									<option value="<?php echo $room->room_id; ?>" disabled><?php
 										echo htmlentities(sprintf(
-											'%s (%s / %s belegt)',
+											'%s (%s / %s belegt) - %s €',
 											$room->name,
 											$room->bookings->count(),
-											$room->bed_count
+											$room->bed_count,
+											$room->price
 										));
 									?></option>
 								<?php endif; ?>
 							<?php endforeach; ?>
 						</select>
 						<label for="room-id-single">Zimmer</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col s12 l6 offset-l3">
+						<blockquote>Zimmerwechsel können nur dann selbst durchgeführt werden, wenn die Preise übereinstimmen. Wenn du ein Zimmer mit einem anderen Preis buchen möchtest, schick uns einfach eine kurze Nachricht, und wir kümmern uns darum.</blockquote>
 					</div>
 				</div>
 			</div>
