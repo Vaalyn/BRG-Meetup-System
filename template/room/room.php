@@ -22,13 +22,7 @@
 
 										<div class="row hide">
 											<div class="col s12 m6 l4">
-												<img src="img/zimmerplan-erdgeschoss.png" alt="Zimmerplan Erdgeschoss" class="materialboxed z-depth-1" />
-											</div>
-											<div class="col s12 m6 l4">
-												<img src="img/zimmerplan-obergeschoss.png" alt="Zimmerplan Oberschoss" class="materialboxed z-depth-1" />
-											</div>
-											<div class="col s12 m6 l4">
-												<img src="img/zimmerplan-dachgeschoss.png" alt="Zimmerplan Dachgeschoss" class="materialboxed z-depth-1" />
+												<img src="img/zimmerplan.png" alt="Zimmerplan" class="materialboxed z-depth-1" />
 											</div>
 										</div>
 
