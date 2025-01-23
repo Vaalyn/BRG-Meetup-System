@@ -94,6 +94,7 @@ $(document).ready(function() {
 					$('#add-room-modal h5').text('Zimmer bearbeiten');
 					$('#add-room-modal form #id').val(id);
 					$('#add-room-modal form #name').val(data.result.name);
+					$('#add-room-modal form #description').val(data.result.description);
 					$('#add-room-modal form #room-type').val(data.result.room_type_id);
 					$('#add-room-modal form #bed-count').val(data.result.bed_count);
 					$('#add-room-modal form #price').val(data.result.price);

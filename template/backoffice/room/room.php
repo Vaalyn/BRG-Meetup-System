@@ -119,6 +119,13 @@
 								<label for="price">Preis</label>
 							</div>
 						</div>
+
+						<div class="row">
+							<div class="input-field col s12">
+								<input name="description" id="description" type="text" />
+								<label for="description">Beschreibung</label>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>

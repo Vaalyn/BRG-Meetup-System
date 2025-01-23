@@ -10,6 +10,7 @@ class RoomModelManager {
 	/**
 	 * @param int $roomTypeId
 	 * @param string $name
+	 * @param string $description
 	 * @param int $bedCount
 	 * @param int $price
 	 *
@@ -18,14 +19,16 @@ class RoomModelManager {
 	public function createRoom(
 		int $roomTypeId,
 		string $name,
+		string $description,
 		int $bedCount,
 		int $price
 	): Room {
-		$this->validateRoomArguments($roomTypeId, $name, $bedCount, $price);
+		$this->validateRoomArguments($roomTypeId, $name, $description, $bedCount, $price);
 
 		$room               = new Room();
 		$room->room_type_id = $roomTypeId;
 		$room->name         = $name;
+		$room->description  = $description;
 		$room->bed_count    = $bedCount;
 		$room->price        = $price;
 		$room->save();
@@ -41,6 +44,7 @@ class RoomModelManager {
 	 * @param int $id
 	 * @param int $roomTypeId
 	 * @param string $name
+	 * @param string $description
 	 * @param int $bedCount
 	 * @param int $price
 	 *
@@ -50,10 +54,11 @@ class RoomModelManager {
 		int $id,
 		int $roomTypeId,
 		string $name,
+		string $description,
 		int $bedCount,
 		int $price
 	): Room {
-		$this->validateRoomArguments($roomTypeId, $name, $bedCount, $price);
+		$this->validateRoomArguments($roomTypeId, $name, $description, $bedCount, $price);
 
 		$room = Room::where('room_id', '=', $id)->first();
 
@@ -63,6 +68,7 @@ class RoomModelManager {
 
 		$room->room_type_id = $roomTypeId;
 		$room->name         = $name;
+		$room->description  = $description;
 		$room->bed_count    = $bedCount;
 		$room->price        = $price;
 		$room->save();
@@ -73,12 +79,19 @@ class RoomModelManager {
 	/**
 	 * @param int $roomTypeId
 	 * @param string $name
+	 * @param string $description
 	 * @param int $bedCount
 	 * @param int $price
 	 *
 	 * @return void
 	 */
-	public function validateRoomArguments(int $roomTypeId, string $name, int $bedCount, int $price): void {
+	public function validateRoomArguments(
+		int $roomTypeId,
+		string $name,
+		string $description,
+		int $bedCount,
+		int $price
+	): void {
 		if (!RoomType::where('room_type_id', '=', $roomTypeId)->exists()) {
 			throw new InfoException('Unbekannte Zimmerart');
 		}

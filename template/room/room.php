@@ -50,6 +50,8 @@
 																	?>
 																</div>
 																<div class="collapsible-body">
+																	<p><?php echo htmlentities($room->description); ?></p>
+																	<br/>
 																	<?php if ($room->bookings->count()) : ?>
 																		<ul class="browser-default">
 																			<?php foreach ($room->bookings as $booking) : ?>
