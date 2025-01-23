@@ -20,9 +20,9 @@
 											<div class="divider"></div>
 										</div>
 
-										<div class="row hide">
+										<div class="row">
 											<div class="col s12 m6 l4">
-												<img src="img/zimmerplan.png" alt="Zimmerplan" class="materialboxed z-depth-1" />
+												<img src="img/zimmerplan.png" alt="Zimmerplan" class="materialboxed z-depth-1 white" />
 											</div>
 										</div>
 
