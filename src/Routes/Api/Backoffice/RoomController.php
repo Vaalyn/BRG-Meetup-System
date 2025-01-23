@@ -35,6 +35,7 @@ class RoomController {
 		$id            = $request->getParsedBody()['id'] ?? 0;
 		$roomTypeId    = $request->getParsedBody()['room_type_id'] ?? 0;
 		$name          = $request->getParsedBody()['name'] ?? '';
+		$description   = $request->getParsedBody()['description'] ?? '';
 		$bedCount      = $request->getParsedBody()['bed_count'] ?? 0;
 		$price         = $request->getParsedBody()['price'] ?? 0;
 
@@ -42,7 +43,7 @@ class RoomController {
 			$roomModelManager = new RoomModelManager();
 
 			if ($id > 0) {
-				$roomModelManager->updateRoom($id, $roomTypeId, $name, $bedCount, $price);
+				$roomModelManager->updateRoom($id, $roomTypeId, $name, $description, $bedCount, $price);
 
 				return $response->write(json_encode(array(
 					'status' => 'success',
@@ -50,7 +51,7 @@ class RoomController {
 				)));
 			}
 
-			$roomModelManager->createRoom($roomTypeId, $name, $bedCount, $price);
+			$roomModelManager->createRoom($roomTypeId, $name, $description, $bedCount, $price);
 
 			return $response->write(json_encode(array(
 				'status' => 'success',
