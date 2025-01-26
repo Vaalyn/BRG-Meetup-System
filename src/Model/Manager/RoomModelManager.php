@@ -100,8 +100,8 @@ class RoomModelManager {
 			throw new InfoException('Es muss ein Name eingegeben werden');
 		}
 
-		if ($bedCount <= 0) {
-			throw new InfoException('Es muss eine Bettenanzahl größer 0 eingegeben werden');
+		if ($bedCount < 0) {
+			throw new InfoException('Es muss eine positive Bettenanzahl oder 0 eingegeben werden');
 		}
 
 		if ($price <= 0) {
