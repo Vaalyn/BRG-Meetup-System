@@ -28,9 +28,8 @@ class GalleryController {
 	 */
 	public function __invoke(Request $request, Response $response, array $args): Response {
 		$year = null;
-		$images = [];
 
-		if (isset($args['year']) && in_array($args['year'], ['2016', '2017', '2018'])) {
+		if (isset($args['year']) && in_array($args['year'], ['2016', '2017', '2018', '2022'])) {
 			$year = $args['year'];
 		}
 
