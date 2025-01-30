@@ -159,7 +159,7 @@
 								<div class="row">
 									<div class="col s12">
 										<input name="bedding" id="bedding" class="filled-in" type="checkbox" />
-										<label for="bedding">Mir ist bewusst, dass ich Bettwäsche und Bettlaken (oder Schlafsack und Bettlaken) selbst mit zu bringen habe. Wenn ich diese nicht selbst mitbringe sind von mir 7 Euro Leihgebühren für Leibettwäsche zu entrichten.</label>
+										<label for="bedding">Mir ist bewusst, dass ich Bettwäsche und Bettlaken (oder Schlafsack und Bettlaken) selbst mit zu bringen habe. Wenn ich diese nicht selbst mitbringe sind von mir 3,50 Euro Leihgebühren für Leibettwäsche zu entrichten.</label>
 									</div>
 								</div>
 

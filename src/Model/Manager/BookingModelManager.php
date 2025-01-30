@@ -85,7 +85,7 @@ class BookingModelManager {
 		$this->validateBookingArguments($coupleCode, $roomId, $nightHike);
 
 		if ($bedding === false) {
-			throw new InfoException('Du musst bestätigen, dass du eigene Bettwäsche mitbringen wirst und wenn du keine mitbringst du 7 Euro Leihgebühr entrichten musst.');
+			throw new InfoException('Du musst bestätigen, dass du eigene Bettwäsche mitbringen wirst und wenn du keine mitbringst du 3,50 Euro Leihgebühr entrichten musst.');
 		}
 
 		if ($couple) {
