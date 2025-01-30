@@ -35,7 +35,7 @@
 							<div class="row">
 								<div class="col s12">
 									<h5>VERANSTALTUNGSREGELN</h5>
-									<ol >
+									<ol>
 										<li>
 											Wir setzten den Gebrauch der eigenen Vernunft voraus. Handelt dementsprechend.
 										</li>
@@ -49,7 +49,10 @@
 										</li>
 
 										<li>
-											Nachtruhe: Ab 23 Uhr gilt Zimmerlautstärke. Im Außenbereich sind Gespräche auf ein minimum zu reduzieren. In den Veranstaltungsräumen gilt Zimmerlautstärke. Auf dem Zeltplatz gilt ab 23 Uhr Nachtruhe.
+											Nachtruhe: Ab 22 Uhr gilt Zimmerlautstärke. Im Außenbereich sind Gespräche auf ein minimum zu reduzieren. In den Veranstaltungsräumen gilt Zimmerlautstärke.
+											<ol>
+												<li>Besonders auf dem Zeltplatz gilt ab 22 Uhr Nachtruhe da wir uns in einem Naturschutzgebiet befinden.</li>
+											</ol>
 										</li>
 
 										<li>
