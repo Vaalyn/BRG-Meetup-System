@@ -60,7 +60,7 @@
 										</li>
 
 										<li>
-											Der BRG e.V. übernimmt keine Haftung. Der BRG e.V. stellt die Räumlichkeit, Getränke, Kuchen, den Grill, Geschirr und Besteck zur Verfügung. Der BRG e.V. kann und wird keinerlei Haftung für Beschädigungen oder Verlust von mitgebrachten Geräten, Zubehör oder Datenträgern übernehmen. Daraus folgen:
+											Der BRG e.V. übernimmt keine Haftung. Der BRG e.V. stellt die Räumlichkeit, Getränke, Essen, den Grill, Geschirr und Besteck zur Verfügung. Der BRG e.V. kann und wird keinerlei Haftung für Beschädigungen oder Verlust von mitgebrachten Geräten, Zubehör oder Datenträgern übernehmen. Daraus folgen:
 
 											<ol>
 												<li>
