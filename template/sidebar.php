@@ -42,7 +42,7 @@
 					<div class="divider"></div>
 
 					<p class="center">
-						<a href="preis" class="btn waves-effect waves-light color-1">Weitere Infos</a>
+						<a href="teilnahmegebuehr" class="btn waves-effect waves-light color-1">Weitere Infos</a>
 					</p>
 				</div>
 			</div>
