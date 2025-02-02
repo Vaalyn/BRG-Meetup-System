@@ -19,8 +19,19 @@
 										</p>
 
 										<p>
-											Am Samstag und Sonntag wird ein Frühstücksbuffet bereitgestellt und am Samstagabend wird von uns gekocht werden, genaueres wird auch hier noch veröffentlicht.<br />
+											Am Samstag und Sonntag wird ein Frühstücksbuffet bereitgestellt und am Samstagabend wird von uns gekocht werden, genaueres wird auch hier noch veröffentlicht.
+										</p>
+
+										<p>
 											Es wird euch zudem in Form von Snacks, Obst etc. zwischen den Mahlzeiten etwas zu Essen bereitgestellt.
+										</p>
+
+										<p>
+											Getränke wie Softdrinks, Säfte und Wasser werden durchgehend angeboten. Und natürlich morgens der unerlässliche Kaffee!
+										</p>
+
+										<p>
+											Wir werden keine alkoholischen Getränke anbieten. Ihr dürft euch aber gerne etwas mitbringen und in einem verantwortungsvollen Rahmen konsumieren. Beachtet dazu bitte Punkt 3 unserer <a href="/haftungsausschluss" target="_blank">Veranstaltungsregeln</a>
 										</p>
 									</div>
 								</div>

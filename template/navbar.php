@@ -37,7 +37,7 @@
 							<a href="packliste" class="white-text">Packliste</a>
 						</li>
 						<li>
-							<a href="preis" class="white-text">Preis</a>
+							<a href="teilnahmegebuehr" class="white-text">Teilnahmegebühr</a>
 						</li>
 					</ul>
 				</li>

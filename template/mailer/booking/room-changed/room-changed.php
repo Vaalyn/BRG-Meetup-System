@@ -8,7 +8,7 @@
 		Name: <?php echo htmlentities($booking->room->name); ?><br />
 		Bettenanzahl: <?php echo $booking->room->bed_count; ?><br />
 		Zimmerart: <?php echo htmlentities($booking->room->roomType->name); ?><br />
-		Preis: <?php echo htmlentities($booking->room->price); ?>&nbsp;€<br />
+		Teilnahmegebühr: <?php echo htmlentities($booking->room->price); ?>&nbsp;€<br />
 	</p>
 
 	<?php if ($booking->couple_code !== '') : ?>

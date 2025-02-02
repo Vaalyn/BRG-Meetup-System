@@ -6,41 +6,55 @@
 		<div class="row">
 			<div class="col s12">
 				<div class="overflow-side-scroll">
-					<table class="bordered hide">
+					<table class="bordered">
 						<thead>
 							<tr>
 								<th class="center">Zeiten</th>
-								<th class="center">Hauptraum</th>
-								<th class="center">Gelände</th>
-								<th class="center">Fun Fun Raum</th>
-								<th class="center">Außerhalb</th>
+								<th class="center">Allgemein</th>
+								<th class="center">Musikraum</th>
+								<th class="center">Großer Saal</th>
+								<th class="center">Draußen</th>
 							</tr>
 						</thead>
 
 						<tbody>
 							<tr>
-								<td class="center">Ab 12:00</td>
-								<td class="center light-blue darken-1" colspan="4">Anreise</td>
+								<td class="center">15:00</td>
+								<td class="center light-blue darken-1" rowspan="3">Einlass/Anmeldung</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
+							</tr>
+
+							<tr>
+								<td class="center">16:00</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
+								<td class="center">-</td>
+							</tr>
+
+							<tr>
+								<td class="center">17:00</td>
+								<td class="center green" rowspan="6">Karaoke / Trotmania</td>
+								<td class="center orange darken-2" rowspan="7">Musik & Spiele</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">18:00</td>
-								<td class="center green" colspan="2">Eröffnung</td>
-								<td class="center">-</td>
+								<td class="center blue darken-1" rowspan="2">Abendessen</td>
 								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">19:00</td>
-								<td class="center blue darken-1" rowspan="2">Abendessen</td>
 								<td class="center">-</td>
-								<td class="center orange darken-2" rowspan="3">Karaoke & Trotmania</td>
-								<td class="center purple" rowspan="4">Nachtwanderung</td>
 							</tr>
 
 							<tr>
 								<td class="center">20:00</td>
 								<td class="center">-</td>
+								<td class="center purple" rowspan="5">Nachtwanderung & Lagerfeuer</td>
 							</tr>
 
 							<tr>
@@ -51,21 +65,16 @@
 							<tr>
 								<td class="center">22:00</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">23:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
-								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">00:00</td>
-								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>

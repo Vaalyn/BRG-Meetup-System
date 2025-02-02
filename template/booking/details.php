@@ -73,7 +73,7 @@
 													</td>
 												</tr>
 												<tr>
-													<th>Preis</th>
+													<th>Teilnahmegebühr</th>
 													<td><?php echo $user->booking->room->price; ?>&nbsp;€</td>
 												</tr>
 												<tr>

@@ -76,7 +76,7 @@ $app->get('/packliste', Frontend\PackingListController::class)->setName('packing
 
 $app->get('/password-reset/{code}', Frontend\PasswordResetController::class)->setName('password-reset');
 
-$app->get('/preis', Frontend\PriceController::class)->setName('price');
+$app->get('/teilnahmegebuehr', Frontend\PriceController::class)->setName('price');
 
 $app->get('/programm', Frontend\ScheduleController::class)->setName('schedule');
 

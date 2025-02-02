@@ -6,21 +6,21 @@
 		<div class="row">
 			<div class="col s12">
 				<div class="overflow-side-scroll">
-					<table class="bordered hide">
+					<table class="bordered">
 						<thead>
 							<tr>
 								<th class="center">Zeiten</th>
-								<th class="center">Hauptraum</th>
-								<th class="center">Gelände</th>
-								<th class="center">Fun Fun Raum</th>
-								<th class="center">Außerhalb</th>
+								<th class="center">Allgemein</th>
+								<th class="center">Musikraum</th>
+								<th class="center">Großer Saal</th>
+								<th class="center">Draußen</th>
 							</tr>
 						</thead>
 
 						<tbody>
 							<tr>
 								<td class="center">08:00</td>
-								<td class="center blue darken-1" rowspan="3">Frühstück</td>
+								<td class="center blue darken-1" rowspan="2">Frühstück</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
@@ -42,16 +42,6 @@
 
 							<tr>
 								<td class="center">11:00</td>
-								<td class="center red" colspan="4">Zimmerabnahme</td>
-							</tr>
-
-							<tr>
-								<td class="center"></td>
-								<td class="center green" colspan="4">Abschluss</td>
-							</tr>
-
-							<tr>
-								<td class="center">Im Anschluss</td>
 								<td class="center light-blue darken-1" colspan="4">Abreise</td>
 							</tr>
 						</tbody>

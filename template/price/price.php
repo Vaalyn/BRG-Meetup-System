@@ -9,12 +9,13 @@
 					<div class="col s12 l8 pull-l4">
 						<div class="card color-3">
 							<div class="card-content grey-text text-lighten-2">
-								<h3 class="card-title center">Preis</h3>
+								<h3 class="card-title center">Teilnahmegebühr</h3>
 								<div class="divider"></div>
 
 								<div class="row">
 									<div class="col s12">
-										<p>Der Preis wird aktuell noch von uns kalkuliert und wird voraussichtlich je nach Art des gebuchten Zimmers leicht variieren. Weiteres kann zu gegebener Zeit der Zimmerliste entnommen werden.</p>
+										<p>Die Teilnahmegebühr richtet sich danach, welches Zimmer ihr bucht. Die Preise könnt ihr auf der Zimmerübersicht sehen.</p>
+										<p>Im Preis inbegriffen sind der Einlass, die Teilnahme an Events, sowie die Übernachtungen und die Verpflegung.</p>
 									</div>
 								</div>
 

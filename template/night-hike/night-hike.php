@@ -14,24 +14,12 @@
 
 								<div class="row">
 									<div class="col s12">
-										<p>Wir klären derzeit noch ob wir die Nachtwanderung dieses mal auch anbieten können.</p>
-									</div>
-
-									<div class="col s12 hide">
 										<p>
-											Die Nachtwanderung findet am Freitag Abend statt. Die Teilnehmer werden in drei Gruppen aufgeteilt, welche jeweils von einem Teammitglied auf der Strecke begleitet wird.
+										Auch in diesem Jahr wird es eine kleine Nachtwanderung durch die Natur der Wernershöhe geben. Wenn ihr daran teilnehmen wollt, gebt das bitte bei eurer Anmeldung an.
 										</p>
 
 										<p>
-											Die Strecke selbst beläuft sich auf circa 3,5km Länge und wird zwischen 45min und 60min pro Gruppe dauern.
-										</p>
-
-										<p>
-											Während dieser Wanderung wird die Gruppe auch Aufgaben bewältigen müssen, welche innerhalb einer kleinen Geschichte verpackt sein werden.
-										</p>
-
-										<p>
-											Um an der Nachtwanderung teilzunehmen wird folgendes vorrausgesetzt:
+											Die Wandung kann auch durch unwegsames Gelände führen, daher wird folgendes vorrausgesetzt:
 										</p>
 
 										<ul class="browser-default">
@@ -42,10 +30,6 @@
 
 										<p>
 											Wird eine dieser Bedingungen nicht erfüllt, so ist eine Teilnahme nicht möglich.
-										</p>
-
-										<p>
-											Desweiteren kann die Nachtwanderung auch kurzfristig ausfallen, wenn bspw. die Wetterverhältnisse oder unvorhersehbare Ereignisse eine Durchführung zu gefährlich oder unmöglich machen.
 										</p>
 									</div>
 								</div>

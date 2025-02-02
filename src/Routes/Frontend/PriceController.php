@@ -33,7 +33,7 @@ class PriceController {
 			'database' => $this->container->database,
 			'auth' => $this->container->auth,
 			'flashMessages' => $this->container->flash->getMessages(),
-			'pageTitle' => 'Preis',
+			'pageTitle' => 'Teilnahmegebühr',
 			'meetupDate' => $this->container->config['meetupDate'],
 			'meetupYear' => date('Y', strtotime($this->container->config['meetupDate'])),
 			'payment' => $this->container->config['payment']

@@ -51,7 +51,7 @@
 										<div class="divider"></div>
 
 										<p>
-											??? Parkplätze ???
+											Es sind Parkplätze in begrenzter Anzahl vorhanden. Bitte schließt euch, wenn möglich, zu Fahrgemeinschaften zusammen.
 										</p>
 									</div>
 
@@ -62,7 +62,7 @@
 										<div class="divider"></div>
 
 										<p>
-											Der nächste Bahnhof ist in Alfeld (Leine).
+											Solltet ihr per Zug am Bahnhof Alfeld (Leine) anreisen und von dort aus einen Shuttle-Service benötigt werden, schreibt dies bitte in eurer Anmeldung, mit eurer geplanten Ankunftszeit rein.
 										</p>
 									</div>
 								</div>
