@@ -58,6 +58,24 @@
 										</ul>
 									</div>
 								</div>
+
+								<div class="row">
+									<div class="col s12">
+										<p>
+											Wenn ihr an der Nachtwanderung teilnehmt denkt daran, folgendes mit zu bringen:
+										</p>
+
+										<ul class="browser-default">
+											<li>Festes Schuhwerk</li>
+											<li>Körperliche Fitness und Unversehrtheit um die Strecke, welche auch mal bergauf oder bergab geht, zu bewältigen</li>
+											<li>Eine Taschenlampe <span class="red-text">(Smartphone mit Taschenlampe ist nicht ausreichend!)</span></li>
+										</ul>
+
+										<p>
+											Wird eine dieser Bedingungen nicht erfüllt, so ist eine Teilnahme nicht möglich.
+										</p>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
