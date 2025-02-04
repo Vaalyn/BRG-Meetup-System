@@ -23,10 +23,10 @@
 					<div class="card-content white-text">
 						<h3 class="card-title center">Login</h3>
 						<div class="divider"></div>
-						<div class="row">
+						<div class="row hide">
 							<div class="col s12">Accounts von früheren Meetups sind nicht mehr vorhanden. Bitte erstelle einen neuen Account falls du früher schon einmal für eines unserer Meetups angemeldet warst.</div>
 						</div>
-						<div class="row">
+						<div class="row hide">
 							<div class="divider"></div>
 						</div>
 
