@@ -63,6 +63,6 @@
 	</p>
 
 	<p>
-		Sollte es zu einer Stornierung kommen, so wird die Teilnahmegebühr, sofern bereits gezahlt, (abzgl. 0,10€ Überweisungsgebühr) zurückgebucht. Bei nicht erscheinen zum Meetup, kann keine Rückerstattung mehr erfolgen. Die Stornierung ist bis zwei Tage vor Meetupbeginn (06.05.) möglich. Danach ist eine Stornierung aus Organisatorischen Gründen nicht mehr möglich.
+		Sollte es zu einer Stornierung kommen, so wird die Teilnahmegebühr, sofern bereits gezahlt, (abzgl. 0,10€ Überweisungsgebühr) zurückgebucht. Bei nicht erscheinen zum Meetup, kann keine Rückerstattung mehr erfolgen. Die Stornierung ist bis zwei Wochen vor Meetupbeginn (06.06.) möglich. Danach ist eine Stornierung aus Organisatorischen Gründen nicht mehr möglich.
 	</p>
 <?php include_once(__DIR__ . '/../../footer.php'); ?>
