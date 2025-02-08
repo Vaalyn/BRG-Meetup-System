@@ -62,7 +62,7 @@
 										<div class="divider"></div>
 
 										<p>
-											Solltet ihr per Zug am Bahnhof Alfeld (Leine) anreisen und von dort aus einen Shuttle-Service benötigt werden, schreibt dies bitte in eurer Anmeldung, mit eurer geplanten Ankunftszeit rein.
+											Der nächste Bahnhof befindet sich in Alfeld (Leine)
 										</p>
 									</div>
 								</div>

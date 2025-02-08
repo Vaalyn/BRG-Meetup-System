@@ -20,7 +20,7 @@
 						<tbody>
 							<tr>
 								<td class="center">08:00</td>
-								<td class="center blue darken-1" rowspan="2">Frühstück</td>
+								<td class="center blue darken-1" rowspan="3">Frühstück</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>

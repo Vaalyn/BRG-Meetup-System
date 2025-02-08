@@ -13,7 +13,7 @@
 								<th class="center">Allgemein</th>
 								<th class="center">Musikraum</th>
 								<th class="center">Großer Saal</th>
-								<th class="center">Draußen</th>
+								<th class="center" colspan="2">Draußen</th>
 							</tr>
 						</thead>
 
@@ -23,43 +23,45 @@
 								<td class="center light-blue darken-1" rowspan="3">Einlass/Anmeldung</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center" colspan="2">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">16:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
-								<td class="center">-</td>
+								<td class="center" colspan="2">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">17:00</td>
 								<td class="center green" rowspan="6">Karaoke / Trotmania</td>
 								<td class="center orange darken-2" rowspan="7">Musik & Spiele</td>
-								<td class="center">-</td>
+								<td class="center" colspan="2">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">18:00</td>
 								<td class="center blue darken-1" rowspan="2">Abendessen</td>
-								<td class="center">-</td>
+								<td class="center" colspan="2">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">19:00</td>
-								<td class="center">-</td>
+								<td class="center" colspan="2">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">20:00</td>
 								<td class="center">-</td>
-								<td class="center purple" rowspan="5">Nachtwanderung & Lagerfeuer</td>
+								<td class="center indigo darken-1" rowspan="5">Lagerfeuer</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">21:00</td>
 								<td class="center">-</td>
+								<td class="center purple" rowspan="2">Nachtwanderung</td>
 							</tr>
 
 							<tr>
@@ -71,6 +73,7 @@
 								<td class="center">23:00</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
@@ -78,11 +81,12 @@
 								<td class="center">-</td>
 								<td class="center">-</td>
 								<td class="center">-</td>
+								<td class="center">-</td>
 							</tr>
 
 							<tr>
 								<td class="center">Im Anschluss</td>
-								<td class="red center" colspan="4">Nachtruhe</td>
+								<td class="red center" colspan="5">Nachtruhe</td>
 							</tr>
 						</tbody>
 					</table>
