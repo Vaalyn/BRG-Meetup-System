@@ -73,6 +73,7 @@ class BookingController {
 
 		switch ($user->userInfo->gender->gender_code) {
 			case 'male':
+			case 'non_binary':
 				$roomsSingle = $rooms->where('roomType.type_code', '=', 'normal');
 				break;
 

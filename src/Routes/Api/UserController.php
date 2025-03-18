@@ -140,7 +140,7 @@ class UserController {
 				throw new InfoException('Kein Benutzer mit diesem Usernamen für die E-Mail Addresse gefunden');
 			}
 
-			$code = Uuid::uuid4();
+			$code = Uuid::uuid4()->toString();
 
 			$recoveryCode          = new RecoveryCode();
 			$recoveryCode->user_id = $user->user_id;

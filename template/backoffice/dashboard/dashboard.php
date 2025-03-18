@@ -36,6 +36,10 @@
 											<td><?php echo $malesCount; ?></td>
 										</tr>
 										<tr>
+											<th>Diverse</th>
+											<td><?php echo $nonBinariesCount; ?></td>
+										</tr>
+										<tr>
 											<th>Frauen</th>
 											<td><?php echo $femalesCount; ?></td>
 										</tr>

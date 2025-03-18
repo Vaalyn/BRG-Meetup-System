@@ -306,8 +306,8 @@ class BookingModelManager {
 	 */
 	public function validateNormalRoomBookingArguments(): void {
 		if (
-			$this->auth->user()->userInfo->gender->gender_code === 'female' &&
-			!$this->allowUnisexRooms
+			$this->auth->user()->userInfo->gender->gender_code === 'female'
+			&& !$this->allowUnisexRooms
 		) {
 			throw new InfoException('Dieses Zimmer ist nicht für weibliche Besucher verfügbar');
 		}

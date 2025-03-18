@@ -34,6 +34,7 @@ class DashboardController {
 		$bookingsCount     = Booking::count();
 		$paidBookingsCount = Booking::where('paid', '=', true)->count();
 		$malesCount        = $this->getBookingCountByGenderCode('male');
+		$nonBinariesCount  = $this->getBookingCountByGenderCode('non_binary');
 		$femalesCount      = $this->getBookingCountByGenderCode('female');
 
 		$mailToAllRecipients = sprintf(
@@ -56,6 +57,7 @@ class DashboardController {
 			'bookingsCount' => $bookingsCount,
 			'paidBookingsCount' => $paidBookingsCount,
 			'malesCount' => $malesCount,
+			'nonBinariesCount' => $nonBinariesCount,
 			'femalesCount' => $femalesCount,
 			'mailToAllRecipients' => $mailToAllRecipients,
 			'bookingIsActive' => $bookingIsActive,
