@@ -15,9 +15,10 @@
 											<th>Username</th>
 											<th>Vorname</th>
 											<th>Nachname</th>
+											<th class="center-align">Geschlecht</th>
 											<th>E-Mail</th>
-											<th>Bezahlt</th>
-											<th>Nachtwanderung</th>
+											<th class="center-align">Bezahlt</th>
+											<th class="center-align">Nachtwanderung</th>
 											<th>Gebucht</th>
 											<th>Aktion</th>
 										</tr>
@@ -29,19 +30,28 @@
 												<td><?php echo htmlentities($booking->user->username); ?></td>
 												<td><?php echo htmlentities($booking->user->userInfo->first_name); ?></td>
 												<td><?php echo htmlentities($booking->user->userInfo->last_name); ?></td>
+												<td class="center-align">
+													<?php if ($booking->user->userInfo->gender->gender_code === 'male') : ?>
+														<i class="material-icons tooltipped" data-position="top" data-tooltip="Männlich">male</i>
+													<?php elseif ($booking->user->userInfo->gender->gender_code === 'female') : ?>
+														<i class="material-icons tooltipped" data-position="top" data-tooltip="Weiblich">female</i>
+													<?php else : ?>
+														<i class="material-icons tooltipped" data-position="top" data-tooltip="Divers">question_mark</i>
+													<?php endif; ?>
+												</td>
 												<td>
 													<a href="mailto:<?php echo htmlentities($booking->user->email); ?>">
 														<?php echo htmlentities($booking->user->email); ?>
 													</a>
 												</td>
-												<td>
+												<td class="center-align">
 													<?php if ($booking->paid) : ?>
 														<i class="material-icons green-text text-darken-2">check_circle</i>
 													<?php else : ?>
 														<i class="material-icons red-text text-darken-2">remove_circle</i>
 													<?php endif; ?>
 												</td>
-												<td>
+												<td class="center-align">
 													<?php if ($booking->bookingInfo->night_hike) : ?>
 														<i class="material-icons green-text text-darken-2">check_circle</i>
 													<?php else : ?>
