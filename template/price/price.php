@@ -14,7 +14,7 @@
 
 								<div class="row">
 									<div class="col s12">
-										<p>Die Teilnahmegebühr richtet sich danach, welches Zimmer ihr bucht. Die Preise könnt ihr auf der Zimmerübersicht sehen.</p>
+										<p>Die Teilnahmegebühr richtet sich danach, welches Zimmer ihr bucht. Die Preise könnt ihr auf der <a href="zimmer">Zimmerübersicht</a> sehen.</p>
 										<p>Im Preis inbegriffen sind der Einlass, die Teilnahme an Events, sowie die Übernachtungen und die Verpflegung.</p>
 									</div>
 								</div>
