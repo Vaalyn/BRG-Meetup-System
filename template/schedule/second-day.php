@@ -99,7 +99,7 @@
 
 							<tr>
 								<td class="center">20:00</td>
-								<td class="center orange darken-2" rowspan="2">Party</td>
+								<td class="center orange darken-2" rowspan="2">Party (Cabra & Samudash)</td>
 								<td class="center purple" rowspan="5">Lagerfeuer</td>
 								<td class="center">-</td>
 							</tr>

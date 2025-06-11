@@ -15,7 +15,7 @@
 								<div class="row">
 									<div class="col s12">
 										<p>
-											Es wird am Freitagabend ein von uns gekochtes Abendessen geben. Genauere Informationen über das Abendessen werden im Laufe der Zeit noch von uns veröffentlicht.
+											Es wird am Freitagabend ein von uns gekochtes Abendessen in Form von Veganer Bolognese mit Weizen Nudeln geben.
 										</p>
 
 										<p>
