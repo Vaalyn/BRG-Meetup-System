@@ -59,7 +59,7 @@
 							<tr>
 								<td class="center">13:00</td>
 								<td class="center">-</td>
-								<td class="center purple" rowspan="2" colspan="2">Pizzabacken</td>
+								<td class="center purple" rowspan="2" colspan="2">Naan backen</td>
 							</tr>
 
 							<tr>
