@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Gender extends Model {
 	protected $table      = 'gender';
 	protected $primaryKey = 'gender_id';
-	protected $dates      = ['created_at', 'updated_at'];
 
 	/**
 	 * @return \Illuminate\Database\Eloquent\Relations\HasMany

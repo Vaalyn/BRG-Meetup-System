@@ -7,6 +7,7 @@ use BronyRadioGermany\Meetup\Model\Gender;
 use BronyRadioGermany\Meetup\Model\User;
 use BronyRadioGermany\Meetup\Model\UserInfo;
 use BronyRadioGermany\Meetup\Service\Auth\AuthInterface;
+use DateTimeImmutable;
 use Respect\Validation\Validator;
 
 class UserInfoModelManager {
@@ -131,8 +132,6 @@ class UserInfoModelManager {
 		}
 
 		if (!Validator::date('Y-m-d')->validate($birthday)) {
-			var_dump($birthday);
-			die();
 			throw new InfoException('Ungültiges Format für Geburtsdatum');
 		}
 
@@ -170,11 +169,9 @@ class UserInfoModelManager {
 	 * @return bool
 	 */
 	protected function isYearsAgoOnMeetup(string $datetime, int $years): bool {
-		$birthdayDateTime                 = \DateTime::createFromFormat('Y-m-d', $datetime);
-		$meetupDateTime                   = \DateTime::createFromFormat('Y-m-d', $this->meetupDate);
-		$timeToMeetupInterval             = $meetupDateTime->diff(new \DateTime());
-		$birthdayWithMeetupDateDifference = $birthdayDateTime->sub($timeToMeetupInterval);
+		$birthdayDateTime = DateTimeImmutable::createFromFormat('!Y-m-d', $datetime);
+		$meetupDateTime   = DateTimeImmutable::createFromFormat('!Y-m-d', $this->meetupDate);
 
-		return Validator::age($years)->validate($birthdayWithMeetupDateDifference);
+		return $birthdayDateTime->modify(sprintf('+%d years', $years)) <= $meetupDateTime;
 	}
 }

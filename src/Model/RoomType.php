@@ -11,7 +11,6 @@ class RoomType extends Model {
 
 	protected $table      = 'room_type';
 	protected $primaryKey = 'room_type_id';
-	protected $dates      = ['created_at', 'updated_at', 'deleted_at'];
 
 	/**
 	 * @return \Illuminate\Database\Eloquent\Relations\HasMany

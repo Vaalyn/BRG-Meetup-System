@@ -312,7 +312,7 @@ class BookingController {
 			'Mitbringsel',
 			'Nachtwanderung',
 			'Volljährig zum Meetup'
-		]);
+		], escape: '\\');
 
 		$userInfoModelManager = new UserInfoModelManager(
 			$this->container->auth,
@@ -335,7 +335,7 @@ class BookingController {
 				$isEighteenOnMeetup
 			];
 
-			fputcsv($temporaryCsvFile, $csvEntry);
+			fputcsv($temporaryCsvFile, $csvEntry, escape: '\\');
 		}
 
 		$fileSize = fstat($temporaryCsvFile)['size'];

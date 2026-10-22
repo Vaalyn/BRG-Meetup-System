@@ -260,7 +260,7 @@ class BookingModelManager {
 	 * @param string $coupleCode
 	 * @param int $roomId
 	 * @param bool $nightHike
-	 * @param null|\BronyRadioGermany\Meetup\Model\Booking $booking
+	 * @param ?Booking $booking
 	 *
 	 * @return void
 	 */
@@ -268,7 +268,7 @@ class BookingModelManager {
 		string $coupleCode,
 		int $roomId,
 		bool $nightHike,
-		Booking $booking = null
+		?Booking $booking = null
 	): void {
 		$room = Room::where('room_id', '=', $roomId)->first();
 

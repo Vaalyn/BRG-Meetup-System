@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class UserInfo extends Model {
 	protected $table      = 'user_info';
 	protected $primaryKey = 'user_info_id';
-	protected $dates      = ['birthday', 'created_at', 'updated_at'];
+	protected $casts      = ['birthday' => 'date:Y-m-d'];
 
 	/**
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo

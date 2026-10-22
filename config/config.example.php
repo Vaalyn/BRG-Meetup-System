@@ -39,14 +39,14 @@ return [
 		],
 		'flysystem' => [
 			'files' => [
-				'adapter' => 'League\Flysystem\Adapter\Local',
+				'adapter' => 'League\Flysystem\Local\LocalFilesystemAdapter',
 				'arguments' => [
 					__DIR__ . '/../files'
 				],
 				'config' => []
 			],
 			'gallery' => [
-				'adapter' => 'League\Flysystem\Adapter\Local',
+				'adapter' => 'League\Flysystem\Local\LocalFilesystemAdapter',
 				'arguments' => [
 					__DIR__ . '/../public/img/meetup'
 				],

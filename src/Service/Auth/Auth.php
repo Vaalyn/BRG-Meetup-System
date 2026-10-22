@@ -155,12 +155,12 @@ class Auth implements AuthInterface {
 
 		$browser = sprintf(
 			"Browser: %s\nVersion: %s\nOS: %s\nVersion: %s\nGerät: %s - %s\n",
-			$browserParser->browser->name,
-			$browserParser->browser->version->value,
-			$browserParser->os->alias,
-			$browserParser->os->version->nickname,
-			$browserParser->device->manufacturer,
-			$browserParser->device->model
+			$browserParser->browser->name ?? '',
+			$browserParser->browser->version->value ?? '',
+			$browserParser->os->alias ?? '',
+			$browserParser->os->version->nickname ?? '',
+			$browserParser->device->manufacturer ?? '',
+			$browserParser->device->model ?? ''
 		);
 
 		$authToken                = new AuthToken();

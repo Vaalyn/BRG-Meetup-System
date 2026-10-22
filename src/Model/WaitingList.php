@@ -10,5 +10,4 @@ class WaitingList extends Model {
 
 	protected $table      = 'waiting_list';
 	protected $primaryKey = 'waiting_list_id';
-	protected $dates      = ['created_at', 'updated_at', 'deleted_at'];
 }
